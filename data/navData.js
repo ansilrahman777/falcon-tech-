@@ -1,22 +1,22 @@
 // data/navData.js
 const navData = [
   {
-    label: "Who We Are",
-    href: "/who-we-are",
+    label: "About us",
+    href: "/about-us",
     submenu: [
-      { label: "About Us", href: "/who-we-are/about" },
-      { label: "Leadership", href: "/who-we-are/leadership" },
-      { label: "Partnerships", href: "/who-we-are/partnerships" },
-      { label: "Governance", href: "/who-we-are/governance" },
+      { label: "About Us", href: "/about-us/about" },
+      { label: "Leadership", href: "/about-us/leadership" },
+      { label: "Partnerships", href: "/about-us/partnerships" },
+      { label: "Governance", href: "/about-us/governance" },
     ],
   },
   {
-    label: "Solutions",
-    href: "/solutions",
+    label: "Services",
+    href: "/services",
     submenu: [
-      { label: "Calibration Services", href: "/solutions/calibration" },
-      { label: "Survey & Geospatial", href: "/solutions/survey" },
-      { label: "3D Scanning", href: "/solutions/3d-scanning" },
+      { label: "Calibration Services", href: "/services/calibration" },
+      { label: "Survey & Geospatial", href: "/services/survey" },
+      { label: "3D Scanning", href: "/services/3d-scanning" },
     ],
   },
   {
@@ -45,7 +45,6 @@ const navData = [
       { label: "Training & Education", href: "/careers/training" },
     ],
   },
-  { label: "Media Center", href: "/media-center" },
 ];
 
 export default navData;

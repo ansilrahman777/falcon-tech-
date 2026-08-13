@@ -12,6 +12,8 @@ const LANGS = [
   { code: "ar", label: "العربية" },
 ];
 
+const LOGO_SRC = "/assets/logos/falcon-tech-ksa-white-logo.png";
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null); // index of open submenu
@@ -67,11 +69,11 @@ export default function Header() {
         className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 ${
           isDark
             ? "bg-black/70 backdrop-blur-md border-b border-white/10"
-            : "bg-gradient-to-b from-black/50 to-transparent"
+            : "bg-linear-to-b from-black/60 to-transparent"
         }`}
       >
         {/* Top row: lang | logo | search */}
-        <div className="relative flex items-center justify-between px-6 lg:px-12 py-4">
+        <div className="relative flex items-center justify-between px-6 lg:px-12 py-10">
           {/* Language switcher */}
           <div className="relative hidden md:block">
             <button
@@ -112,18 +114,21 @@ export default function Header() {
             </AnimatePresence>
           </div>
 
-          {/* Logo — centered */}
+          {/* Logo — centered. Source PNG is dark/red on transparent bg,
+              so it's forced to pure white via filter to stay visible on
+              this dark/transparent header. Swap for a real white-logo
+              asset later and drop the filter classes. */}
           <Link
             href="/"
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
             <Image
-              src="/assets/logos/falcon-tech-ksa-black-logo.png"
-              alt="Falcon Tech KSA"
-              width={140}
-              height={48}
+              src={LOGO_SRC}
+              alt="Falcon Technologies KSA"
+              width={2400}
+              height={417}
               priority
-              className="h-10 w-auto lg:h-12 object-contain"
+              className="h-8 md:h-16 w-auto object-contain"
             />
           </Link>
 
@@ -181,7 +186,7 @@ export default function Header() {
                       href={sub.href}
                       className="group w-44"
                     >
-                      <div className="relative h-28 w-full overflow-hidden rounded-lg">
+                      <div className="relative h-28 w-full overflow-hidden rounded-lg bg-white/5">
                         <Image
                           src={sub.image}
                           alt={sub.label}
@@ -221,11 +226,11 @@ export default function Header() {
           >
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
               <Image
-                src="/assets/logo/falcon-tech-ksa-log0.png"
-                alt="Falcon Tech KSA"
-                width={120}
-                height={40}
-                className="h-9 w-auto object-contain"
+                src={LOGO_SRC}
+                alt="Falcon Technologies KSA"
+                width={2400}
+                height={417}
+                className="h-7 w-auto object-contain brightness-0 invert"
               />
               <button
                 onClick={() => setMobileOpen(false)}

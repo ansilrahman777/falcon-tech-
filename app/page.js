@@ -1,11 +1,13 @@
-import Header from "@/components/common/Header";
 import HomeLayout from "@/components/layout/HomeLayout";
-import Image from "next/image";
+import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
     <HomeLayout>
-      <Header />
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
     </HomeLayout>
   );
 }

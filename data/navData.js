@@ -37,14 +37,7 @@ const navData = [
     ],
   },
   { label: "Projects", href: "/projects" },
-  {
-    label: "Careers",
-    href: "/careers",
-    submenu: [
-      { label: "Open Positions", href: "/careers/open-positions" },
-      { label: "Training & Education", href: "/careers/training" },
-    ],
-  },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 export default navData;

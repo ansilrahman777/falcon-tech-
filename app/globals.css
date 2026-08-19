@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+/* Enables class-based dark mode (`.dark` on <html>) for Tailwind v4's
+   `dark:` variant, driven by next-themes. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Brand tokens — use `bg-brand`, `text-brand`, `border-brand`, etc.
+   anywhere instead of hardcoding the red hex, so the theme colour only
+   ever needs to change in one place. */
+@theme {
+  --color-brand: #e31b23;
+  --color-brand-dark: #c9141c;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}

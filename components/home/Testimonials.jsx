@@ -39,7 +39,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mx-auto inline-flex h-[30px] items-center rounded-full border border-neutral-300 px-[17px] dark:border-white/15"
+          className="mx-auto inline-flex h-8 items-center rounded-full border border-neutral-300 px-[17px] dark:border-white/15"
         >
           <span className="text-[12px] font-medium uppercase tracking-[-0.01em] text-neutral-900 dark:text-white">
             Client Feedback

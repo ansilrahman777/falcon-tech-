@@ -7,27 +7,27 @@ import { ShieldCheck, Gauge, Globe2, HeadphonesIcon } from "lucide-react";
 const points = [
   {
     icon: ShieldCheck,
-    title: "ISO-Certified Quality",
+    title: "Documented Quality",
     description:
-      "Every service we deliver follows internationally recognized calibration and inspection standards.",
+      "Material and equipment inspection, in-process checks and testing carried out to applicable ASTM, ISO and SASO standards.",
   },
   {
     icon: Gauge,
-    title: "Rapid Turnaround",
+    title: "Application Engineering",
     description:
-      "Streamlined workflows and modern equipment mean faster results without cutting corners.",
+      "Material and design selection reviewed against your stored liquid, capacity, temperature and site conditions before we build.",
   },
   {
     icon: Globe2,
-    title: "Nationwide Coverage",
+    title: "Saudi & GCC Coverage",
     description:
-      "On-site and in-lab services available across the Kingdom, wherever your project is located.",
+      "Manufacturing, installation, restoration and chiller service support delivered across the Kingdom and wider GCC region.",
   },
   {
     icon: HeadphonesIcon,
-    title: "Dedicated Support",
+    title: "Single-Point Support",
     description:
-      "A single point of contact from first inquiry to final report — no runaround.",
+      "One point of contact across engineering, manufacturing, installation, restoration and maintenance — no runaround.",
   },
 ];
 
@@ -38,7 +38,11 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 22 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+  },
 };
 
 export default function WhyChooseUs() {
@@ -51,15 +55,15 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="relative h-[360px] w-full overflow-hidden rounded-sm sm:h-[440px] lg:h-[520px]"
+          className="relative h-90 w-full overflow-hidden rounded-sm sm:h-110 lg:h-130"
         >
           <Image
-              src="/assets/images/about/about-large.png"
-            alt="Precision calibration in progress"
+            src="/assets/images/home/falcon-tech-ksa-about.webp"
+            alt="Industrial tank fabrication in progress"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
 
           {/* floating stat card */}
           <div className="absolute bottom-6 left-6 right-6 flex items-center gap-4 rounded-sm bg-white/95 p-5 backdrop-blur dark:bg-neutral-900/95 sm:right-auto sm:w-72">
@@ -68,10 +72,10 @@ export default function WhyChooseUs() {
             </div>
             <div>
               <p className="text-sm font-semibold text-neutral-900 dark:text-white">
-                100% Certified Accuracy
+                Documented Quality
               </p>
               <p className="text-xs text-neutral-500 dark:text-white/50">
-                Traceable to national standards
+                Traceable to ASTM, ISO & SASO standards
               </p>
             </div>
           </div>
@@ -84,7 +88,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex h-[30px] items-center rounded-full border border-neutral-300 px-[17px] dark:border-white/15"
+            className="inline-flex h-8 items-center rounded-full border border-neutral-300 px-5 dark:border-white/15"
           >
             <span className="text-[12px] font-medium uppercase tracking-[-0.01em] text-neutral-900 dark:text-white">
               Why Choose Falcon
@@ -111,7 +115,11 @@ export default function WhyChooseUs() {
             {points.map((point) => {
               const Icon = point.icon;
               return (
-                <motion.div key={point.title} variants={itemVariants} className="flex gap-4">
+                <motion.div
+                  key={point.title}
+                  variants={itemVariants}
+                  className="flex gap-4"
+                >
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand/10">
                     <Icon size={20} className="text-brand" />
                   </div>

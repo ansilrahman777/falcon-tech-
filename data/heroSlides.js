@@ -1,33 +1,33 @@
 const heroSlides = [
   {
     id: 1,
-    eyebrow: "Crafting Landmarks, Building Trust.",
-    heading: ["Quality Engineering", "You Can Trust"],
+    eyebrow: "Engineered Industrial Solutions.",
+    heading: ["Reliable Industrial Solutions.", "Clear Engineering."],
     description:
-      "Falcon Technologies delivers calibration, survey, and geospatial solutions that keep the Kingdom's critical industries running safely and accurately.",
-    ctaLabel: "Discover More",
+      "Falcon Technologies provides engineered tank systems, thermal insulation, tank lining and restoration, chiller installation and maintenance, and industrial support services for demanding commercial and industrial applications across Saudi Arabia.",
+    ctaLabel: "Choose Your Solution",
     ctaHref: "/services",
-    image: "/assets/images/home/hero-slide-1.png",
+    image: "/assets/images/home/showcase-2.png",
   },
   {
     id: 2,
-    eyebrow: "Precision at Every Scale.",
-    heading: ["Engineering Excellence", "Across the Kingdom"],
+    eyebrow: "Application-Based Design.",
+    heading: ["Engineering First,", "Every Project"],
     description:
-      "From pressure calibration to 3D scanning, our certified teams bring accuracy and reliability to every site we serve.",
-    ctaLabel: "Our Services",
-    ctaHref: "/services",
-    image: "/assets/images/home/hero-slide-2.png",
+      "From material selection to manufacturing and installation, our engineering team reviews stored liquid, capacity, temperature and site conditions before recommending a solution.",
+    ctaLabel: "Talk to an Engineer",
+    ctaHref: "/engineering",
+    image: "/assets/images/home/slider-2.webp",
   },
   {
     id: 3,
-    eyebrow: "Trusted Nationwide.",
-    heading: ["Built for Long-Term", "Industrial Excellence"],
+    eyebrow: "Single-Point Support.",
+    heading: ["Engineering, Manufacturing", "and Maintenance"],
     description:
-      "Falcon Technologies partners with industry leaders to deliver dependable engineering services on time, every time.",
-    ctaLabel: "Get a Quote",
+      "Documented quality, traceable inspection and a single point of contact — from tank fabrication and insulation to chiller installation and after-service support.",
+    ctaLabel: "Send Your Requirement",
     ctaHref: "/contact-us",
-    image: "/assets/images/home/hero-slide-3.png",
+    image: "/assets/images/home/slider-3.webp",
   },
 ];
 

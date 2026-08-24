@@ -68,7 +68,7 @@ export default function StatsCounter() {
               <div className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
                 <Counter value={stat.value} suffix={stat.suffix} inView={inView} />
               </div>
-              <p className="text-sm uppercase tracking-[0.1em] text-white/50">
+              <p className="text-sm uppercase tracking-widest text-white/50">
                 {stat.label}
               </p>
             </div>

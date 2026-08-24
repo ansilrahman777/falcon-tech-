@@ -21,7 +21,12 @@ export default function Header() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  // activeMenu -> which submenu PANEL is shown (only ever set to an idx that has a submenu)
+  // hoveredIdx -> which nav item the mouse is currently over (drives the underline, for ALL items)
   const [activeMenu, setActiveMenu] = useState(null);
+  const [hoveredIdx, setHoveredIdx] = useState(null);
+
   const [langOpen, setLangOpen] = useState(false);
   const [lang, setLang] = useState("en");
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -44,13 +49,28 @@ export default function Header() {
     return () => (document.body.style.overflow = "");
   }, [mobileOpen]);
 
+  // Re-entering an already-open submenu panel keeps it open (cancels the close timer)
   const openMenu = useCallback((idx) => {
     clearTimeout(closeTimer.current);
     setActiveMenu(idx);
   }, []);
 
+  // Fires on hover for EVERY nav item.
+  // - Always updates hoveredIdx so the underline follows the cursor.
+  // - Only updates activeMenu (the submenu panel) when the item actually has a submenu,
+  //   so hovering a plain link leaves whatever submenu was last open still visible.
+  const handleItemEnter = useCallback((idx, hasSubmenu) => {
+    clearTimeout(closeTimer.current);
+    setHoveredIdx(idx);
+    if (hasSubmenu) setActiveMenu(idx);
+  }, []);
+
+  // Leaving the header entirely closes the panel and clears the hover state together
   const scheduleClose = useCallback(() => {
-    closeTimer.current = setTimeout(() => setActiveMenu(null), 150);
+    closeTimer.current = setTimeout(() => {
+      setActiveMenu(null);
+      setHoveredIdx(null);
+    }, 150);
   }, []);
 
   const solid = scrolled || activeMenu !== null;
@@ -167,12 +187,12 @@ export default function Header() {
           {navData.map((item, idx) => (
             <div
               key={item.label}
-              onMouseEnter={() => item.submenu && openMenu(idx)}
+              onMouseEnter={() => handleItemEnter(idx, !!item.submenu)}
             >
               <Link
                 href={item.href}
                 className={`relative text-sm font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:transition-all after:duration-300 ${textClass} ${underlineClass} ${
-                  activeMenu === idx ? "after:w-full" : "after:w-0"
+                  hoveredIdx === idx ? "after:w-full" : "after:w-0"
                 }`}
               >
                 {item.label}

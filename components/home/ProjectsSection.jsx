@@ -5,43 +5,43 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Industrial Survey & 3D Scanning",
+    title: "FRP & Steel Tank Fabrication",
     description:
-      "Advanced surveying and 3D scanning solutions delivering accurate project data for complex industrial environments.",
-    image: "/assets/images/home/showcase-1.png",
-    href: "/projects/industrial-survey-3d-scanning",
+      "Engineered FRP/GRP, polyethylene and steel tank systems for water, diesel and chemical storage across industrial sites.",
+    image: "/assets/images/home/showcase-2.png",
+    href: "/projects/tank-fabrication",
   },
   {
     id: 2,
-    title: "Tank Manufacturing & Fabrication",
+    title: "Thermal & Aerogel Insulation",
     description:
-      "Precision fabrication and manufacturing solutions for industrial tanks and engineered steel structures.",
+      "Storage tank, pipe, equipment and building insulation systems, including lightweight aerogel solutions for space-constrained sites.",
     image: "/assets/images/home/showcase-2.png",
-    href: "/projects/tank-manufacturing-fabrication",
+    href: "/projects/thermal-aerogel-insulation",
   },
   {
     id: 3,
-    title: "Industrial Insulation Solutions",
+    title: "Tank Restoration & Rehabilitation",
     description:
-      "Professional insulation systems designed to support equipment protection, thermal performance and operational efficiency.",
-    image: "/assets/images/home/showcase-3.png",
-    href: "/projects/industrial-insulation",
+      "Crack repair, structural reinforcement and life-extension work for FRP, steel and concrete storage tanks.",
+    image: "/assets/images/home/showcase-2.png",
+    href: "/projects/tank-restoration-rehabilitation",
   },
   {
     id: 4,
-    title: "Lining & FRP Protection",
+    title: "Tank Lining & Corrosion Protection",
     description:
-      "Specialized lining, rubber and FRP protection solutions engineered for demanding industrial applications.",
-    image: "/assets/images/home/project-01.jpg",
-    href: "/projects/lining-frp-protection",
+      "FRP, chemical-resistant and waterproof lining systems engineered for demanding chemical and process storage applications.",
+    image: "/assets/images/home/showcase-2.png",
+    href: "/projects/tank-lining-corrosion-protection",
   },
   {
     id: 5,
-    title: "Maintenance & Asset Integrity",
+    title: "Chiller Installation & Maintenance",
     description:
-      "Comprehensive maintenance, inspection and integrity services supporting reliable and efficient industrial assets.",
-    image: "/assets/images/home/showcase-1.png",
-    href: "/projects/maintenance-asset-integrity",
+      "New chiller installation, commissioning, preventive maintenance and troubleshooting for commercial and industrial facilities.",
+    image: "/assets/images/home/showcase-2.png",
+    href: "/projects/chiller-installation-maintenance",
   },
 ];
 export default function ProjectsSection() {

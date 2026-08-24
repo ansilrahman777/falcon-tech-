@@ -1,32 +1,32 @@
 const showcaseSlides = [
   {
     id: 1,
-    heading: ["Precision That", "Drives Performance"],
+    heading: ["Engineered For", "What You Store"],
     description:
-      "Advanced surveying and 3D scanning solutions that deliver accurate digital data for smarter engineering, planning, and asset management.",
-    ctaLabel: "Explore Services",
-    ctaHref: "/services",
-    image: "/assets/images/home/showcase-1.png",
+      "FRP/GRP, polyethylene and steel tank systems for water, diesel, fuel and chemical storage — designed around your stored liquid, capacity and site conditions.",
+    ctaLabel: "Explore Tank Solutions",
+    ctaHref: "/services/tank-solutions",
+    image: "/assets/images/home/showcase-2.png",
     thumb: "/assets/images/home/Showcase-1.png",
   },
   {
     id: 2,
     heading: ["Built To Protect", "Your Assets"],
     description:
-      "From tank fabrication and insulation to rubber, FRP, and protective lining solutions, we help extend asset life and improve industrial performance.",
+      "From thermal insulation and aerogel systems to tank restoration, lining and FRP protection, we help extend asset life and improve operating performance.",
     ctaLabel: "Our Solutions",
-    ctaHref: "/services",
+    ctaHref: "/services/thermal-insulation",
     image: "/assets/images/home/showcase-2.png",
     thumb: "/assets/images/home/Showcase-2.png",
   },
   {
     id: 3,
-    heading: ["Inspect. Maintain.", "Perform Better."],
+    heading: ["Install. Maintain.", "Perform Better."],
     description:
-      "Reliable inspection, integrity, maintenance, and industrial support services designed to keep critical assets safe, efficient, and operational.",
+      "Reliable industrial services and chiller installation, commissioning and preventive maintenance — keeping critical equipment safe, efficient and operational.",
     ctaLabel: "Contact Us",
     ctaHref: "/contact-us",
-    image: "/assets/images/home/showcase-3.png",
+    image: "/assets/images/home/showcase-2.png",
     thumb: "/assets/images/home/Showcase-3.png",
   },
 ];

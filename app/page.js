@@ -9,6 +9,8 @@ import ProcessSteps from "@/components/home/ProcessSteps";
 import Testimonials from "@/components/home/Testimonials";
 import CTASection from "@/components/home/CTASection";
 import ProjectsSection from "@/components/home/ProjectsSection";
+import BlogSection from "@/components/home/BlogSection";
+import LocationMap from "@/components/home/LocationMap";
 
 export default function Home() {
   return (
@@ -23,6 +25,8 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       <CTASection />
+      <BlogSection />
+      <LocationMap />
     </HomeLayout>
   );
 }

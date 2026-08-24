@@ -20,7 +20,7 @@ const steps = [
     number: "03",
     icon: Wrench,
     title: "On-Site Execution",
-    description: "Certified engineers carry out the work using calibrated, industry-grade equipment.",
+    description: "Qualified engineers carry out fabrication, installation or maintenance work using industry-grade equipment.",
   },
   {
     number: "04",
@@ -40,7 +40,7 @@ export default function ProcessSteps() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex h-[30px] items-center rounded-full border border-neutral-300 px-[17px] dark:border-white/15"
+            className="inline-flex h-7 items-center rounded-full border border-neutral-300 px-4 dark:border-white/15"
           >
             <span className="text-[12px] font-medium uppercase tracking-[-0.01em] text-neutral-900 dark:text-white">
               How We Work
@@ -60,7 +60,7 @@ export default function ProcessSteps() {
 
         <div className="relative mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* connecting line, desktop only */}
-          <div className="pointer-events-none absolute left-0 right-0 top-[38px] hidden h-px bg-neutral-200 dark:bg-white/10 lg:block" />
+          <div className="pointer-events-none absolute left-0 right-0 top-10 hidden h-px bg-neutral-200 dark:bg-white/10 lg:block" />
 
           {steps.map((step, i) => {
             const Icon = step.icon;
@@ -73,7 +73,7 @@ export default function ProcessSteps() {
                 transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="relative flex flex-col items-center text-center"
               >
-                <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-full border-2 border-brand bg-white dark:bg-neutral-950">
+                <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border-2 border-brand bg-white dark:bg-neutral-950">
                   <Icon size={28} strokeWidth={1.5} className="text-brand" />
                 </div>
                 <span className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-brand">
@@ -82,7 +82,7 @@ export default function ProcessSteps() {
                 <h3 className="mt-2 text-lg font-semibold text-neutral-900 dark:text-white">
                   {step.title}
                 </h3>
-                <p className="mt-2 max-w-[240px] text-sm leading-relaxed text-neutral-500 dark:text-white/55">
+                <p className="mt-2 max-w-60 text-sm leading-relaxed text-neutral-500 dark:text-white/55">
                   {step.description}
                 </p>
               </motion.div>

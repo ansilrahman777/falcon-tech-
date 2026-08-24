@@ -53,7 +53,7 @@ export default function ShowcaseSlider() {
     <section
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
-      className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-neutral-100"
+      className="relative h-svh min-h-144 w-full overflow-hidden bg-neutral-100"
     >
       {/* ---------- Background photo, desaturated, with a left-to-right
            wipe curtain that reveals each incoming slide ---------- */}
@@ -76,7 +76,7 @@ export default function ShowcaseSlider() {
             />
             {/* fade the image into the page background on the left so text
                 stays readable, matching the reference's soft left edge */}
-            <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 via-neutral-100/40 to-transparent lg:via-neutral-100/10" />
+            <div className="absolute inset-0 bg-linear-to-r from-neutral-100 via-neutral-100/40 to-transparent lg:via-neutral-100/10" />
           </motion.div>
         </AnimatePresence>
 
@@ -110,7 +110,7 @@ export default function ShowcaseSlider() {
       {/* ---------- Content: red self-drawing frame + masked text reveal ---------- */}
       <div className="relative z-20 flex h-full items-center justify-center">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-16">
-          <div className="relative w-full max-w-[360px] px-9 pb-9 pt-24 sm:pt-28">
+          <div className="relative w-full max-w-96 px-9 pb-9 pt-24 sm:pt-28">
             {/* frame border segments — top/bottom draw first, sides connect after */}
             <motion.span
               key={`t-${slide.id}`}

@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
-  ScanLine,
   Factory,
+  Flame,
   ShieldCheck,
   Layers,
-  Shield,
+  Snowflake,
   Wrench,
   ClipboardCheck,
   ArrowLeft,
@@ -18,45 +18,45 @@ import {
 const services = [
   {
     id: 1,
-    title: "Survey & 3D Scanning",
-    icon: ScanLine,
-    href: "/services/survey-3d-scanning",
+    title: "Tank Solutions",
+    icon: Factory,
+    href: "/services/tank-solutions",
   },
   {
     id: 2,
-    title: "Tank Manufacturing & Fabrication",
-    icon: Factory,
-    href: "/services/tank-manufacturing-fabrication",
+    title: "Thermal Insulation",
+    icon: Flame,
+    href: "/services/thermal-insulation",
   },
   {
     id: 3,
-    title: "Insulation Solutions",
+    title: "Tank Restoration & Rehabilitation",
     icon: ShieldCheck,
-    href: "/services/insulation-solutions",
+    href: "/services/tank-restoration-lining",
   },
   {
     id: 4,
-    title: "Lining Solutions",
+    title: "Tank Lining",
     icon: Layers,
-    href: "/services/lining-solutions",
+    href: "/services/tank-lining",
   },
   {
     id: 5,
-    title: "Lining, Rubber & FRP Protection",
-    icon: Shield,
-    href: "/services/lining-rubber-frp-protection",
+    title: "Chiller Installation & Maintenance",
+    icon: Snowflake,
+    href: "/services/chiller-installation-maintenance",
   },
   {
     id: 6,
-    title: "Maintenance & Industrial Services",
+    title: "Industrial Services",
     icon: Wrench,
-    href: "/services/maintenance-industrial-services",
+    href: "/services/industrial-services",
   },
   {
     id: 7,
-    title: "Inspection & Integrity Solutions",
+    title: "Inspection & Quality Assurance",
     icon: ClipboardCheck,
-    href: "/services/inspection-integrity-solutions",
+    href: "/quality-standards",
   },
 ];
 
@@ -98,19 +98,7 @@ export default function ServicesSection() {
 
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
-      <div
-        className="
-          mx-auto
-          w-full
-          max-w-7xl
-          px-5
-          py-[70px]
-          sm:px-8
-          sm:py-[80px]
-          lg:px-0
-          lg:py-[92px]
-        "
-      >
+      <div className="mx-auto w-full max-w-7xl px-5 py-17.5 sm:px-8 sm:py-20 lg:px-0 lg:py-23">
         {/* HEADER */}
 
         <div className="relative">
@@ -119,27 +107,10 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="
-              inline-flex
-              h-[30px]
-              items-center
-              rounded-full
-              border
-              border-[#d0d0ca] dark:border-white/15
-              px-[16px]
-            "
+            className="inline-flex h-7.5 items-center rounded-full border border-[#d0d0ca] dark:border-white/15 px-4"
           >
-            <span
-              className="
-                text-[11px]
-                font-medium
-                uppercase
-                leading-none
-                tracking-[-0.01em]
-                text-[#171717] dark:text-white
-              "
-            >
-              Our Services
+            <span className=" text-[11px] font-medium uppercase leading-none tracking-[-0.01em] text-[#171717] dark:text-white">
+              What Do You Need?
             </span>
           </motion.div>
 
@@ -151,64 +122,25 @@ export default function ServicesSection() {
               duration: 0.7,
               delay: 0.08,
             }}
-            className="
-              mt-[19px]
-              text-[43px]
-              font-normal
-              leading-[1.08]
-              tracking-[-0.045em]
-              text-[#222222] dark:text-white
-              sm:text-[50px]
-              lg:text-[56px]
-            "
+            className=" mt-4.75 text-[43px] font-normal leading-[1.08] tracking-[-0.045em]text-[#222222] dark:text-white sm:text-[50px] lg:text-[56px] "
           >
-            Provide Quality Services
+            Tanks, Insulation, Lining & Chiller Services
           </motion.h2>
 
           {/* DESKTOP NAVIGATION */}
 
-          <div
-            className="
-              absolute
-              right-0
-              top-[42px]
-              hidden
-              items-center
-              gap-[10px]
-              sm:flex
-            "
-          >
+          <div className="absolute right-0 top-10.5 hidden items-center gap-2.5 sm:flex">
             <button
               type="button"
               aria-label="Previous services"
               onClick={previousSlide}
-              className="
-                group
-                flex
-                h-[59px]
-                w-[59px]
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#deded8] dark:border-white/15
-                bg-white
-                transition-all
-                duration-300
-                hover:border-brand
-                hover:bg-brand
-                dark:bg-neutral-900
-              "
+              className="group flex h-14.75 w-14.75 items-center justify-center rounded-full border border-[#deded8] dark:border-white/15 bg-white
+                transition-all duration-300 hover:border-brand hover:bg-brand dark:bg-neutral-900"
             >
               <ArrowLeft
                 size={23}
                 strokeWidth={1.5}
-                className="
-                  text-[#222222] dark:text-white
-                  transition-colors
-                  duration-300
-                  group-hover:text-white
-                "
+                className="text-[#222222] dark:text-white transition-colors duration-300 group-hover:text-white"
               />
             </button>
 
@@ -216,29 +148,12 @@ export default function ServicesSection() {
               type="button"
               aria-label="Next services"
               onClick={nextSlide}
-              className="
-                group
-                flex
-                h-[59px]
-                w-[59px]
-                items-center
-                justify-center
-                rounded-full
-                bg-brand
-                transition-colors
-                duration-300
-                hover:bg-brand-dark
-              "
+              className="group flex h-14.75 w-14.75 items-center justify-center rounded-full bg-brand transition-colors duration-300 hover:bg-brand-dark"
             >
               <ArrowRight
                 size={23}
                 strokeWidth={1.5}
-                className="
-                  text-white
-                  transition-transform
-                  duration-300
-                  group-hover:translate-x-[2px]
-                "
+                className="text-white transition-transform duration-300 group-hover:translate-x-0.5"
               />
             </button>
           </div>
@@ -251,17 +166,7 @@ export default function ServicesSection() {
             type="button"
             aria-label="Previous services"
             onClick={previousSlide}
-            className="
-              flex
-              h-[48px]
-              w-[48px]
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-[#d8d8d2] dark:border-white/15
-              bg-white dark:bg-neutral-900
-            "
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-[#d8d8d2] dark:border-white/15 bg-white dark:bg-neutral-900"
           >
             <ArrowLeft size={19} />
           </button>
@@ -270,16 +175,7 @@ export default function ServicesSection() {
             type="button"
             aria-label="Next services"
             onClick={nextSlide}
-            className="
-              flex
-              h-[48px]
-              w-[48px]
-              items-center
-              justify-center
-              rounded-full
-              bg-brand
-              text-white
-            "
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-brand text-white"
           >
             <ArrowRight size={19} />
           </button>
@@ -288,7 +184,7 @@ export default function ServicesSection() {
         {/* CAROUSEL */}
 
         <div
-          className="mt-[65px] overflow-hidden"
+          className="mt-16.25 overflow-hidden"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -300,7 +196,7 @@ export default function ServicesSection() {
               duration: 0.7,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="flex gap-[26px]"
+            className="flex gap-6.5"
           >
             {services.map((service, index) => {
               const Icon = service.icon;
@@ -309,37 +205,12 @@ export default function ServicesSection() {
                 <motion.a
                   key={service.id}
                   href={service.href}
-                  initial={{
-                    opacity: 0,
-                    y: 20,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.1,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.05,
-                  }}
-                  className="
-                    group
-                    relative
-                    flex
-                    h-[394px]
-                    w-[310px]
-                    shrink-0
-                    flex-col
-                    overflow-hidden
-                    rounded-[5px]
-                    border
-                    border-[#e4e4df] dark:border-white/10
-                    bg-white dark:bg-neutral-900
-                    p-[40px]
-                  "
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="group relative flex h-98.5 w-77.5 shrink-0 flex-col overflow-hidden rounded-[5px] border
+                   border-[#e4e4df] dark:border-white/10 bg-white dark:bg-neutral-900 p-10"
                 >
                   {/* ICON */}
 
@@ -347,114 +218,42 @@ export default function ServicesSection() {
                     <Icon
                       size={70}
                       strokeWidth={1.15}
-                      className="
-                        text-[#222222] dark:text-white
-                        transition-transform
-                        duration-500
-                        group-hover:scale-[1.04]
-                      "
+                      className="text-[#222222] dark:text-white transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </div>
 
                   {/* HOVER CIRCLE */}
 
                   <div
-                    className="
-                      pointer-events-none
-                      absolute
-                      left-1/2
-                      top-[157px]
-                      flex
-                      h-[100px]
-                      w-[100px]
-                      -translate-x-1/2
-                      -translate-y-1/2
-                      scale-75
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-brand
-                      text-center
-                      opacity-0
-                      transition-all
-                      duration-300
-                      group-hover:scale-100
-                      group-hover:opacity-100
-                    "
+                    className="pointer-events-none absolute left-1/2 top-39.25 flex h-25 w-25 -translate-x-1/2 -translate-y-1/2 scale-75
+                    items-center justify-center rounded-full bg-brand text-center opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
                   >
-                    <span
-                      className="
-                        text-[14px]
-                        font-medium
-                        leading-[1.05]
-                        text-white
-                      "
-                    >
-                      View
-                      <br />
-                      Details
+                    <span className="text-[14px] font-medium leading-[1.05] text-white">
+                      View <br /> Details
                     </span>
                   </div>
 
                   {/* CONTENT */}
 
                   <div className="mt-auto">
-                    <h3
-                      className="
-                        max-w-[235px]
-                        text-[28px]
-                        font-normal
-                        leading-[1.15]
-                        tracking-[-0.035em]
-                        text-[#171717] dark:text-white
-                      "
-                    >
+                    <h3 className="max-w-56 text-[28px] font-normal leading-[1.15] tracking-[-0.035em] text-[#171717] dark:text-white">
                       {service.title}
                     </h3>
 
-                    <div
-                      className="
-                        mt-[34px]
-                        flex
-                        items-center
-                        gap-[5px]
-                        text-[13px]
-                        font-medium
-                        uppercase
-                        tracking-[-0.015em]
-                        text-[#202020] dark:text-white/70
-                      "
-                    >
+                    <div className="mt-8.5 flex items-center gap-1.25 text-[13px] font-medium uppercase tracking-[-0.015em] text-[#202020] dark:text-white/70">
                       <span>Read More</span>
 
                       <ArrowUpRight
                         size={15}
                         strokeWidth={1.7}
-                        className="
-                          transition-transform
-                          duration-300
-                          group-hover:translate-x-[3px]
-                          group-hover:-translate-y-[3px]
-                        "
+                        className="transition-transform duration-300group-hover:translate-x-0.75 group-hover:-translate-y-0.75"
                       />
                     </div>
                   </div>
 
                   {/* HOVER BORDER */}
 
-                  <div
-                    className="
-                      pointer-events-none
-                      absolute
-                      inset-0
-                      rounded-[5px]
-                      border
-                      border-transparent
-                      transition-colors
-                      duration-300
-                      group-hover:border-brand/30
-                    "
-                  />
+                  <div className="pointer-events-none absolute inset-0 rounded-[5px] border border-transparent transition-colors duration-300 group-hover:border-brand/30" />
                 </motion.a>
               );
             })}

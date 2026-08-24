@@ -5,9 +5,9 @@ import Footer from "@/components/common/Footer";
 import ThemeProvider from "@/components/providers/ThemeProvider";
 
 export const metadata = {
-  title: "Falcon Technologies KSA | Engineering. Precision. Performance.",
+  title: "Falcon Technologies | Tanks, Insulation & Industrial Solutions - Saudi Arabia",
   description:
-    "Falcon Technologies delivers calibration, survey, and engineering solutions across the Kingdom of Saudi Arabia.",
+    "Falcon Technologies delivers engineered tank systems, thermal insulation, tank lining and restoration, and chiller installation and maintenance for industrial clients across Saudi Arabia and the GCC.",
 };
 
 export default function RootLayout({ children }) {

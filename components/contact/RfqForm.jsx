@@ -141,6 +141,62 @@ export default function RfqForm() {
         aria-hidden="true"
       />
 
+      {/* Step 1 — What do you need */}
+      <div>
+        <label className={labelClass}>What Do You Need?</label>
+        <div className="flex flex-wrap gap-2">
+          {NEEDS.map((n) => (
+            <button
+              type="button"
+              key={n}
+              onClick={() => setForm((f) => ({ ...f, need: n }))}
+              className={`rounded-full border px-4 py-2 text-xs font-medium transition-colors ${
+                form.need === n
+                  ? "border-brand bg-brand text-white"
+                  : "border-neutral-300 text-neutral-600 hover:border-brand hover:text-brand dark:border-white/15 dark:text-white/60"
+              }`}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Step 2 — Basic requirement */}
+      <div>
+        <label htmlFor="requirement" className={labelClass}>
+          Basic Requirement
+        </label>
+        <input
+          id="requirement"
+          value={form.requirement}
+          onChange={update("requirement")}
+          placeholder="e.g. 20,000 L FRP tank, or chiller make/model & issue"
+          className={inputClass}
+        />
+      </div>
+
+      {/* Step 3 — Installation / site */}
+      <div>
+        <label className={labelClass}>Installation / Site</label>
+        <div className="flex flex-wrap gap-2">
+          {SITES.map((s) => (
+            <button
+              type="button"
+              key={s}
+              onClick={() => setForm((f) => ({ ...f, site: s }))}
+              className={`rounded-full border px-4 py-2 text-xs font-medium transition-colors ${
+                form.site === s
+                  ? "border-brand bg-brand text-white"
+                  : "border-neutral-300 text-neutral-600 hover:border-brand hover:text-brand dark:border-white/15 dark:text-white/60"
+              }`}
+            >
+              {s}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Customer details */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
@@ -214,62 +270,6 @@ export default function RfqForm() {
             placeholder="Stored liquid, concentration, temperature, capacity, dimensions, standards, or chiller manufacturer/model/serial number"
             className={inputClass}
           />
-        </div>
-      </div>
-
-      {/* Step 1 — What do you need */}
-      <div>
-        <label className={labelClass}>What Do You Need?</label>
-        <div className="flex flex-wrap gap-2">
-          {NEEDS.map((n) => (
-            <button
-              type="button"
-              key={n}
-              onClick={() => setForm((f) => ({ ...f, need: n }))}
-              className={`rounded-full border px-4 py-2 text-xs font-medium transition-colors ${
-                form.need === n
-                  ? "border-brand bg-brand text-white"
-                  : "border-neutral-300 text-neutral-600 hover:border-brand hover:text-brand dark:border-white/15 dark:text-white/60"
-              }`}
-            >
-              {n}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Step 2 — Basic requirement */}
-      <div>
-        <label htmlFor="requirement" className={labelClass}>
-          Basic Requirement
-        </label>
-        <input
-          id="requirement"
-          value={form.requirement}
-          onChange={update("requirement")}
-          placeholder="e.g. 20,000 L FRP tank, or chiller make/model & issue"
-          className={inputClass}
-        />
-      </div>
-
-      {/* Step 3 — Installation / site */}
-      <div>
-        <label className={labelClass}>Installation / Site</label>
-        <div className="flex flex-wrap gap-2">
-          {SITES.map((s) => (
-            <button
-              type="button"
-              key={s}
-              onClick={() => setForm((f) => ({ ...f, site: s }))}
-              className={`rounded-full border px-4 py-2 text-xs font-medium transition-colors ${
-                form.site === s
-                  ? "border-brand bg-brand text-white"
-                  : "border-neutral-300 text-neutral-600 hover:border-brand hover:text-brand dark:border-white/15 dark:text-white/60"
-              }`}
-            >
-              {s}
-            </button>
-          ))}
         </div>
       </div>
 

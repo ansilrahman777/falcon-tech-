@@ -10,6 +10,10 @@
 @theme {
   --color-brand: #e31b23;
   --color-brand-dark: #c9141c;
+
+  --color-ink: #0b2a45;
+  --color-steel: #4c5b6b;
+  --color-mist: #eef2f5;
 }
 
 :root {

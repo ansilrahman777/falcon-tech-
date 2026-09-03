@@ -19,7 +19,7 @@ const pathways = [
     audience: "Engineer / Consultant / EPC",
     description:
       "Review drawings, standards, ITP, method statements and service capability records below, then submit a Technical RFQ for project-specific or controlled documents.",
-    cta: { label: "Submit Technical RFQ", href: "/contact-us" },
+    cta: { label: "Submit Technical RFQ", href: "/request-a-quote" },
   },
 ];
 

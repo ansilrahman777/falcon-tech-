@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Factory,
@@ -10,255 +9,119 @@ import {
   Snowflake,
   Wrench,
   ClipboardCheck,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUpRight,
 } from "lucide-react";
 
 const services = [
   {
     id: 1,
     title: "Tank Solutions",
+    tagline:
+      "FRP, polyethylene and steel tanks engineered to your application.",
     icon: Factory,
     href: "/services/tank-solutions",
   },
   {
     id: 2,
     title: "Thermal Insulation",
+    tagline: "Aerogel and conventional systems that cut heat loss and gain.",
     icon: Flame,
     href: "/services/thermal-insulation",
   },
   {
     id: 3,
     title: "Tank Restoration & Rehabilitation",
+    tagline: "Structural repair and life-extension for ageing assets.",
     icon: ShieldCheck,
     href: "/services/tank-restoration-lining",
   },
   {
     id: 4,
     title: "Tank Lining",
+    tagline: "FRP, chemical-resistant and waterproof lining systems.",
     icon: Layers,
     href: "/services/tank-lining",
   },
   {
     id: 5,
     title: "Chiller Installation & Maintenance",
+    tagline: "New installations, servicing and fault diagnosis.",
     icon: Snowflake,
     href: "/services/chiller-installation-maintenance",
   },
   {
     id: 6,
     title: "Industrial Services",
+    tagline: "Inspection, coating and mechanical maintenance support.",
     icon: Wrench,
     href: "/services/industrial-services",
   },
   {
     id: 7,
     title: "Inspection & Quality Assurance",
+    tagline: "Testing, documentation and service records you can trust.",
     icon: ClipboardCheck,
     href: "/quality-standards",
   },
 ];
 
-const CARD_WIDTH = 310;
-const GAP = 26;
-const STEP = CARD_WIDTH + GAP;
+const grid = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.05 } },
+};
+
+const card = {
+  hidden: { opacity: 0, scale: 0.96 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 export default function ServicesSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  const timerRef = useRef(null);
-
-  const nextSlide = () => {
-    setActiveIndex((current) =>
-      current >= services.length - 1 ? 0 : current + 1,
-    );
-  };
-
-  const previousSlide = () => {
-    setActiveIndex((current) =>
-      current <= 0 ? services.length - 1 : current - 1,
-    );
-  };
-
-  useEffect(() => {
-    if (isPaused) return;
-
-    timerRef.current = setInterval(() => {
-      nextSlide();
-    }, 4500);
-
-    return () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-      }
-    };
-  }, [isPaused]);
-
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
       <div className="mx-auto w-full max-w-7xl px-5 py-17.5 sm:px-8 sm:py-20 lg:px-0 lg:py-23">
-        {/* HEADER */}
+        <h2 className="max-w-lg text-[28px] font-normal leading-[1.15] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[34px]">
+          The full range, one contractor
+        </h2>
+        <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-500 dark:text-white/55">
+          Seven disciplines covering tanks, insulation, lining and chiller work,
+          backed by inspection and quality assurance on every job.
+        </p>
 
-        <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex h-7.5 items-center rounded-full border border-[#d0d0ca] dark:border-white/15 px-4"
-          >
-            <span className=" text-[11px] font-medium uppercase leading-none tracking-[-0.01em] text-[#171717] dark:text-white">
-              What Do You Need?
-            </span>
-          </motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.7,
-              delay: 0.08,
-            }}
-            className=" mt-4.75 text-[43px] font-normal leading-[1.08] tracking-[-0.045em]text-[#222222] dark:text-white sm:text-[50px] lg:text-[56px] "
-          >
-            Tanks, Insulation, Lining & Chiller Services
-          </motion.h2>
-
-          {/* DESKTOP NAVIGATION */}
-
-          <div className="absolute right-0 top-10.5 hidden items-center gap-2.5 sm:flex">
-            <button
-              type="button"
-              aria-label="Previous services"
-              onClick={previousSlide}
-              className="group flex h-14.75 w-14.75 items-center justify-center rounded-full border border-[#deded8] dark:border-white/15 bg-white
-                transition-all duration-300 hover:border-brand hover:bg-brand dark:bg-neutral-900"
-            >
-              <ArrowLeft
-                size={23}
-                strokeWidth={1.5}
-                className="text-[#222222] dark:text-white transition-colors duration-300 group-hover:text-white"
-              />
-            </button>
-
-            <button
-              type="button"
-              aria-label="Next services"
-              onClick={nextSlide}
-              className="group flex h-14.75 w-14.75 items-center justify-center rounded-full bg-brand transition-colors duration-300 hover:bg-brand-dark"
-            >
-              <ArrowRight
-                size={23}
-                strokeWidth={1.5}
-                className="text-white transition-transform duration-300 group-hover:translate-x-0.5"
-              />
-            </button>
-          </div>
-        </div>
-
-        {/* MOBILE NAVIGATION */}
-
-        <div className="mt-7 flex gap-2 sm:hidden">
-          <button
-            type="button"
-            aria-label="Previous services"
-            onClick={previousSlide}
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-[#d8d8d2] dark:border-white/15 bg-white dark:bg-neutral-900"
-          >
-            <ArrowLeft size={19} />
-          </button>
-
-          <button
-            type="button"
-            aria-label="Next services"
-            onClick={nextSlide}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-brand text-white"
-          >
-            <ArrowRight size={19} />
-          </button>
-        </div>
-
-        {/* CAROUSEL */}
-
-        <div
-          className="mt-16.25 overflow-hidden"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={grid}
+          className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
         >
-          <motion.div
-            animate={{
-              x: -(activeIndex * STEP),
-            }}
-            transition={{
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="flex gap-6.5"
-          >
-            {services.map((service, index) => {
-              const Icon = service.icon;
+          {services.map((service) => {
+            const Icon = service.icon;
 
-              return (
-                <motion.a
-                  key={service.id}
-                  href={service.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.1 }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
-                  className="group relative flex h-98.5 w-77.5 shrink-0 flex-col overflow-hidden rounded-[5px] border
-                   border-[#e4e4df] dark:border-white/10 bg-white dark:bg-neutral-900 p-10"
-                >
-                  {/* ICON */}
-
-                  <div>
-                    <Icon
-                      size={70}
-                      strokeWidth={1.15}
-                      className="text-[#222222] dark:text-white transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
-                  </div>
-
-                  {/* HOVER CIRCLE */}
-
-                  <div
-                    className="pointer-events-none absolute left-1/2 top-39.25 flex h-25 w-25 -translate-x-1/2 -translate-y-1/2 scale-75
-                    items-center justify-center rounded-full bg-brand text-center opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-                  >
-                    <span className="text-[14px] font-medium leading-[1.05] text-white">
-                      View <br /> Details
-                    </span>
-                  </div>
-
-                  {/* CONTENT */}
-
-                  <div className="mt-auto">
-                    <h3 className="max-w-56 text-[28px] font-normal leading-[1.15] tracking-[-0.035em] text-[#171717] dark:text-white">
-                      {service.title}
-                    </h3>
-
-                    <div className="mt-8.5 flex items-center gap-1.25 text-[13px] font-medium uppercase tracking-[-0.015em] text-[#202020] dark:text-white/70">
-                      <span>Read More</span>
-
-                      <ArrowUpRight
-                        size={15}
-                        strokeWidth={1.7}
-                        className="transition-transform duration-300group-hover:translate-x-0.75 group-hover:-translate-y-0.75"
-                      />
-                    </div>
-                  </div>
-
-                  {/* HOVER BORDER */}
-
-                  <div className="pointer-events-none absolute inset-0 rounded-[5px] border border-transparent transition-colors duration-300 group-hover:border-brand/30" />
-                </motion.a>
-              );
-            })}
-          </motion.div>
-        </div>
+            return (
+              <motion.a
+                key={service.id}
+                href={service.href}
+                variants={card}
+                className="group flex aspect-square flex-col items-center justify-center gap-3 bg-mist p-6 text-center transition-colors duration-300 hover:bg-ink dark:bg-neutral-900 dark:hover:bg-ink"
+              >
+                <Icon
+                  size={34}
+                  strokeWidth={1.2}
+                  className="text-ink transition-colors duration-300 group-hover:text-white dark:text-white/60"
+                />
+                <h3 className="text-base font-normal leading-snug tracking-[-0.01em] text-neutral-900 transition-colors duration-300 group-hover:text-white dark:text-white">
+                  {service.title}
+                </h3>
+                <p className="text-xs leading-relaxed text-neutral-500 transition-colors duration-300 group-hover:text-white/60 dark:text-white/40">
+                  {service.tagline}
+                </p>
+              </motion.a>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );

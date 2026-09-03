@@ -8,6 +8,7 @@ import {
   FileSpreadsheet,
   Lock,
   ArrowUpRight,
+  Eye,
 } from "lucide-react";
 
 const typeIcon = {
@@ -53,7 +54,7 @@ export default function DocumentCard({ doc, categoryLabel, index = 0 }) {
       <div className="mt-5 border-t border-neutral-100 pt-4 dark:border-white/10">
         {isGated ? (
           <Link
-            href={`/contact-us?ref=technical-library&doc=${doc.id}`}
+            href={`/request-a-quote?ref=technical-library&doc=${doc.id}`}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-600 transition-colors hover:text-brand dark:text-white/60"
           >
             <Lock size={13} />
@@ -64,14 +65,26 @@ export default function DocumentCard({ doc, categoryLabel, index = 0 }) {
             />
           </Link>
         ) : (
-          <a
-            href={doc.file}
-            download
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand transition-colors hover:text-brand-dark"
-          >
-            <Download size={13} />
-            Download {doc.type}
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href={doc.file}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-600 transition-colors hover:text-brand dark:text-white/60"
+            >
+              <Eye size={13} />
+              View
+            </a>
+            <span className="h-3.5 w-px bg-neutral-200 dark:bg-white/15" />
+            <a
+              href={doc.file}
+              download
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand transition-colors hover:text-brand-dark"
+            >
+              <Download size={13} />
+              Download
+            </a>
+          </div>
         )}
       </div>
     </motion.div>

@@ -1,31 +1,31 @@
 const heroSlides = [
   {
     id: 1,
-    eyebrow: "Engineered Industrial Solutions.",
-    heading: ["Reliable Industrial Solutions.", "Clear Engineering."],
+    eyebrow: "Industrial Tank Solutions.",
+    heading: ["Built for Your Process.", "Engineered for Your Site."],
     description:
-      "Falcon Technologies provides engineered tank systems, thermal insulation, tank lining and restoration, chiller installation and maintenance, and industrial support services for demanding commercial and industrial applications across Saudi Arabia.",
-    ctaLabel: "Choose Your Solution",
+      "FRP, GRP, polyethylene and steel tank solutions for water, chemicals, fuel and industrial liquids. Materials, capacity and configuration selected around your application and project requirements across Saudi Arabia.",
+    ctaLabel: "Explore Tank Solutions",
     ctaHref: "/services",
     image: "/assets/images/home/hero-slide-6.webp",
   },
   {
     id: 2,
-    eyebrow: "Application-Based Design.",
-    heading: ["Engineering First,", "Every Project"],
+    eyebrow: "Thermal Insulation Division.",
+    heading: ["Control Heat Transfer.", "Improve Energy Efficiency."],
     description:
-      "From material selection to manufacturing and installation, our engineering team reviews stored liquid, capacity, temperature and site conditions before recommending a solution.",
-    ctaLabel: "Talk to an Engineer",
+      "Thermal insulation for storage tanks, pipes, equipment, factory roofs and industrial buildings. Explore conventional and aerogel systems, with material selection and thickness matched to operating conditions and approved technical data.",
+    ctaLabel: "Discuss Your Insulation Needs",
     ctaHref: "/engineering",
     image: "/assets/images/home/hero-slide-4.webp",
   },
   {
     id: 3,
-    eyebrow: "Single-Point Support.",
-    heading: ["Engineering, Manufacturing", "and Maintenance"],
+    eyebrow: "Restoration, Lining & Industrial Services.",
+    heading: ["Protect Your Assets.", "Support Your Operations."],
     description:
-      "Documented quality, traceable inspection and a single point of contact — from tank fabrication and insulation to chiller installation and after-service support.",
-    ctaLabel: "Send Your Requirement",
+      "Tank restoration, protective lining and waterproofing, alongside chiller installation and maintenance support. Share your site requirements for a technical assessment and quotation within our approved service capabilities.",
+    ctaLabel: "Request a Quotation",
     ctaHref: "/contact-us",
     image: "/assets/images/home/hero-slide-5.webp",
   },

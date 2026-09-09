@@ -149,42 +149,43 @@ const navData = [
       {
         label: "Oil & Gas",
         href: "/industries/oil-gas",
-        image: "/assets/images/menu/infrastructure.webp",
+        image: "/assets/images/industries/oil-and-gas.webp",
       },
       {
         label: "Petrochemical & Chemical",
         href: "/industries/petrochemical-chemical",
-        image: "/assets/images/menu/infrastructure.webp",
+        image: "/assets/images/industries/petrochemical-and-chemical.webp",
       },
       {
         label: "Water & Wastewater",
         href: "/industries/water-wastewater",
-        image: "/assets/images/menu/infrastructure.webp",
+        image: "/assets/images/industries/water-and-wastewater.webp",
       },
       {
         label: "Power & Utilities",
         href: "/industries/power-utilities",
-        image: "/assets/images/menu/infrastructure.webp",
+        image: "/assets/images/industries/power-and-utilities.webp",
       },
       {
         label: "Manufacturing",
         href: "/industries/manufacturing",
-        image: "/assets/images/menu/infrastructure.webp",
+        image: "/assets/images/industries/manufacturing.webp",
       },
       {
         label: "Construction & Infrastructure",
         href: "/industries/construction-infrastructure",
-        image: "/assets/images/menu/infrastructure.webp",
+        image: "/assets/images/industries/construction-and-infrastructure.webp",
       },
       {
         label: "Commercial & Industrial",
         href: "/industries/commercial-industrial",
-        image: "/assets/images/menu/infrastructure.webp",
+        image:
+          "/assets/images/industries/commercial-and-industrial-buildings.webp",
       },
       {
         label: "Food & Beverage",
         href: "/industries/food-beverage",
-        image: "/assets/images/menu/infrastructure.webp",
+        image: "/assets/images/industries/food-and-beverage.webp",
       },
     ],
   },

@@ -326,7 +326,7 @@ export default function ServicesSection() {
         </div>
 
         {/* CONTENT */}
-        <div className="relative mt-10 min-h-[300px]">
+        <div className="relative mt-10 min-h-75">
           <AnimatePresence mode="wait">
             <motion.div
               key={division.id}
@@ -371,7 +371,7 @@ export default function ServicesSection() {
                 />
               ) : (
                 <div className="grid grid-cols-1 overflow-hidden rounded-sm border border-neutral-200 dark:border-white/10 lg:grid-cols-2">
-                  <div className="relative aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 lg:aspect-auto">
+                  <div className="relative aspect-4/3 bg-neutral-100 dark:bg-neutral-800 lg:aspect-auto">
                     <Image
                       src={division.single.image}
                       alt={division.single.alt}

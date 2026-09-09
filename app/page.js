@@ -5,6 +5,9 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import StatsCounter from "@/components/home/StatsCounter";
 import ShowcaseSlider from "@/components/home/ShowcaseSlider";
 import ServicesSection from "@/components/home/ServicesSection";
+import ProductsSection from "@/components/home/ProductsSection";
+import CapacityEstimator from "@/components/home/CapacityEstimator";
+import ManufacturingSection from "@/components/home/ManufacturingSection";
 import ProcessSteps from "@/components/home/ProcessSteps";
 import Testimonials from "@/components/home/Testimonials";
 import CTASection from "@/components/home/CTASection";
@@ -19,6 +22,9 @@ export default function Home() {
       <AboutSection />
       <StatsCounter />
       <ServicesSection />
+      <ProductsSection />
+      <CapacityEstimator />
+      <ManufacturingSection />
       <ProjectsSection />
       <ShowcaseSlider />
       <ProcessSteps />

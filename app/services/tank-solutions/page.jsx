@@ -5,16 +5,16 @@ import StandardsBar from "@/components/services/StandardsBar";
 import CTASection from "@/components/home/CTASection";
 
 export const metadata = {
-  title: "Tank Solutions | Falcon Technologies - Saudi Arabia",
+  title: "FRP, Polyethylene & Steel Tank Manufacturer in Saudi Arabia | Falcon Technologies",
   description:
-    "Engineered FRP/GRP, polyethylene and steel tank systems built around your stored liquid, capacity, temperature and site conditions.",
+    "Falcon Technologies designs and fabricates FRP/GRP, polyethylene and steel storage tanks for water, diesel, fuel and chemical applications across Saudi Arabia and the GCC.",
 };
 
 const specs = [
-  ["FRP / GRP tanks", "Potable, process, wastewater, chemical and diesel — hand lay-up, filament winding and project-specific fabrication"],
-  ["Polyethylene tanks", "LLDPE / HDPE, vertical, horizontal, underground and multi-layer rotomolded construction"],
-  ["Steel tank systems", "Fabricated tanks, diesel tanks, supports, skids and custom steel fabrication"],
-  ["Configurations", "Vertical, horizontal, underground, aboveground, cylindrical, rectangular and custom shapes"],
+  ["FRP / GRP tanks", "Fiberglass tanks for potable water, process water, wastewater, diesel and chemical storage"],
+  ["Polyethylene tanks", "LLDPE / HDPE rotomolded tanks, ideal for smaller water and chemical storage needs"],
+  ["Steel tank systems", "Fabricated steel tanks with supports, skids and custom configurations for fuel and industrial use"],
+  ["Build options", "Vertical, horizontal, underground, aboveground, cylindrical, rectangular and custom-shaped tanks"],
 ];
 
 const children = [
@@ -39,11 +39,11 @@ const applications = [
 const standards = ["ASTM D3299", "ASTM D4097", "ASTM D1998", "AS/NZS 4766", "SASO Requirements"];
 
 const process = [
-  { step: "01", title: "Requirement Review", desc: "Stored liquid, concentration, temperature, specific gravity and installation location." },
-  { step: "02", title: "Material Selection", desc: "FRP/GRP, polyethylene or steel selected against the application and service life." },
-  { step: "03", title: "Design & Drawings", desc: "GA/shop drawings, nozzle orientation, supports, anchoring and foundation requirements." },
-  { step: "04", title: "Manufacturing & Inspection", desc: "Controlled fabrication with in-process and final inspection at each stage." },
-  { step: "05", title: "Testing & Handover", desc: "Hydrostatic, spark or dimensional testing as applicable, then documented handover." },
+  { step: "01", title: "Requirement Review", desc: "We start with what you're storing — liquid type, concentration, temperature and installation site." },
+  { step: "02", title: "Material Selection", desc: "FRP/GRP, polyethylene or steel, matched to the application and expected service life." },
+  { step: "03", title: "Design & Drawings", desc: "GA drawings, nozzle placement, supports and foundation requirements confirmed before fabrication." },
+  { step: "04", title: "Manufacturing & Inspection", desc: "Built under controlled conditions with checks at every production stage." },
+  { step: "05", title: "Testing & Handover", desc: "Hydrostatic or dimensional testing as required, followed by documented handover." },
 ];
 
 const related = [
@@ -52,13 +52,45 @@ const related = [
   { label: "Industrial Services", icon: Wrench, href: "/services/industrial-services" },
 ];
 
+const faqs = [
+  {
+    q: "What size tanks does Falcon Technologies manufacture?",
+    a: "Falcon fabricates tanks from a few hundred liters up to large industrial capacities in FRP/GRP, polyethylene and steel, sized to your site and application rather than a fixed catalogue range.",
+  },
+  {
+    q: "Which tank material is best for chemical storage?",
+    a: "FRP/GRP is the most common choice for chemical storage because resin systems can be matched to the specific chemical, concentration and operating temperature. Our engineers confirm the exact specification before fabrication.",
+  },
+  {
+    q: "Can tanks be installed underground?",
+    a: "Yes. Falcon supplies underground tank configurations in FRP/GRP, polyethylene and steel, with foundation and installation guidance provided as part of the design package.",
+  },
+  {
+    q: "Do you supply tanks for diesel and fuel storage?",
+    a: "Yes — Falcon fabricates aboveground and underground diesel and fuel tanks in steel or FRP/GRP, including generator diesel tanks and industrial fuel storage.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Tank Manufacturing",
+  provider: { "@type": "Organization", name: "Falcon Technologies" },
+  areaServed: "Saudi Arabia",
+  name: "Tank Solutions",
+  description:
+    "FRP/GRP, polyethylene and steel tank manufacturing for water, diesel, fuel and chemical storage.",
+};
+
 export default function TankSolutionsPage() {
   return (
     <div className="w-full overflow-hidden">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       <PageHero
         eyebrow="Service — TS"
         title="Tank Solutions"
-        description="Engineered tank systems built around your stored liquid, capacity, temperature and site conditions."
+        description="FRP/GRP, polyethylene and steel tanks engineered around what you store, not a fixed catalogue size."
         breadcrumb="Tank Solutions"
         image="/assets/images/home/hero-slide-1.png"
       />
@@ -67,16 +99,15 @@ export default function TankSolutionsPage() {
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:px-0 lg:py-24">
           <div>
             <Factory size={32} strokeWidth={1.3} className="text-brand" />
-            <h2 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
-              Capability Overview
-            </h2>
+            <h1 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
+              FRP, Polyethylene & Steel Tanks, Built for Your Application
+            </h1>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">
-              From potable water to aggressive chemicals, Falcon designs and
-              fabricates tanks matched to the application rather than a
-              generic catalogue size — reviewing stored liquid,
-              concentration, temperature, specific gravity and installation
-              location before recommending construction material and
-              configuration.
+              As an FRP tank manufacturer serving Saudi Arabia and the wider
+              GCC, Falcon reviews the liquid being stored, its concentration
+              and temperature, and the installation site before recommending
+              a construction material and configuration — rather than
+              starting from a standard size chart.
             </p>
 
             <dl className="mt-10 max-w-xl divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
@@ -98,7 +129,7 @@ export default function TankSolutionsPage() {
 
           <div className="border border-neutral-200 bg-neutral-50 p-8 dark:border-white/10 dark:bg-neutral-900 sm:p-10">
             <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-ink text-xs font-semibold text-white">TS</span>
-            <h3 className="mt-5 text-xl font-normal tracking-[-0.02em] text-neutral-900 dark:text-white">What&rsquo;s Included</h3>
+            <h2 className="mt-5 text-xl font-normal tracking-[-0.02em] text-neutral-900 dark:text-white">What&rsquo;s Included</h2>
             <ul className="mt-6 divide-y divide-neutral-200 dark:divide-white/10">
               {children.map((child) => (
                 <li key={child.href}>
@@ -116,11 +147,10 @@ export default function TankSolutionsPage() {
         </div>
       </section>
 
-      {/* APPLICATIONS */}
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
         <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
-            Where It&rsquo;s Used
+            Industries That Rely on Falcon Tanks
           </h2>
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {applications.map((a) => (
@@ -132,11 +162,10 @@ export default function TankSolutionsPage() {
         </div>
       </section>
 
-      {/* PROCESS */}
       <section className="w-full bg-white dark:bg-neutral-950">
         <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
-            How We Deliver a Tank
+            From Requirement to Handover
           </h2>
           <ol className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
             {process.map((p) => (
@@ -150,10 +179,25 @@ export default function TankSolutionsPage() {
         </div>
       </section>
 
-      {/* STANDARDS specific to this service */}
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+          <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-8 divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
+            {faqs.map((f) => (
+              <div key={f.q} className="py-5">
+                <p className="text-sm font-medium text-neutral-900 dark:text-white">{f.q}</p>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-white dark:bg-neutral-950">
         <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-0">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-neutral-400 dark:text-white/40">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.1em] text-neutral-400 dark:text-white/40">
             Referenced Standards
           </h2>
           <div className="mt-4 flex flex-wrap gap-2">
@@ -166,8 +210,7 @@ export default function TankSolutionsPage() {
         </div>
       </section>
 
-      {/* RELATED SERVICES */}
-      <section className="w-full bg-white dark:bg-neutral-950">
+      <section className="w-full bg-neutral-50 dark:bg-neutral-900">
         <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             Related Services
@@ -179,7 +222,7 @@ export default function TankSolutionsPage() {
                 <Link
                   key={r.href}
                   href={r.href}
-                  className="group flex items-center justify-between border border-neutral-200 p-6 transition-colors hover:border-brand dark:border-white/10"
+                  className="group flex items-center justify-between border border-neutral-200 bg-white p-6 transition-colors hover:border-brand dark:border-white/10 dark:bg-neutral-950"
                 >
                   <span className="flex items-center gap-3">
                     <Icon size={20} strokeWidth={1.4} className="text-steel dark:text-white/40" />

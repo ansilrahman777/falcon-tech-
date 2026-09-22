@@ -105,7 +105,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="max-w-md"
+            className="max-w-lg"
           >
             <p className="mb-4 flex items-center gap-2 text-sm font-semibold text-red-500 lg:text-red-600">
               <span className="h-0.5 w-6 bg-red-500 lg:bg-red-600" />

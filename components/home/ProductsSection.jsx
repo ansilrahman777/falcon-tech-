@@ -1,41 +1,66 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { Droplets, FlaskConical, Container } from "lucide-react";
+import { motion } from "framer-motion";
 
 const products = [
   {
     id: 1,
     title: "FRP / GRP Tanks",
-    capacity: "500 – 500,000 L",
-    use: "Potable water, process water, wastewater, chemical and diesel storage",
-    icon: Droplets,
+    href: "/services/tank-solutions/frp-grp-tanks",
+    image: "/assets/images/home/frp-grp-tanks.webp",
+    alt: "FRP GRP fiberglass tank",
   },
   {
     id: 2,
     title: "Polyethylene Tanks",
-    capacity: "100 – 50,000 L",
-    use: "LLDPE / HDPE tanks for water, chemical and general storage",
-    icon: FlaskConical,
+    href: "/services/tank-solutions/polyethylene-tanks",
+    image: "/assets/images/home/polyethylene-tanks.webp",
+    alt: "Polyethylene LLDPE HDPE tank",
   },
   {
     id: 3,
+    title: "Underground Tanks",
+    href: "/services/tank-solutions/underground-tanks",
+    image: "/assets/images/home/underground-tanks.webp",
+    alt: "Underground storage tank",
+  },
+  {
+    id: 4,
     title: "Steel Tank Systems",
-    capacity: "1,000 – 1,000,000 L",
-    use: "Fabricated diesel, fuel and industrial storage with supports and skids",
-    icon: Container,
+    href: "/services/tank-solutions/steel-tank-systems",
+    image: "/assets/images/home/steel-tank-systems.webp",
+    alt: "Fabricated steel tank system",
+  },
+  {
+    id: 5,
+    title: "Chemical Tanks",
+    href: "/services/tank-solutions/chemical-tanks",
+    image: "/assets/images/home/chemical-tanks.webp",
+    alt: "Chemical storage tank",
+  },
+  {
+    id: 6,
+    title: "Diesel / Fuel Tanks",
+    href: "/services/tank-solutions/diesel-fuel-tanks",
+    image: "/assets/images/home/diesel-fuel-tanks.webp",
+    alt: "Diesel and fuel storage tank",
   },
 ];
 
 const grid = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
+  show: { transition: { staggerChildren: 0.07 } },
 };
 
 const item = {
   hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  },
 };
 
 export default function ProductsSection() {
@@ -48,15 +73,15 @@ export default function ProductsSection() {
               Our Product Range
             </h2>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-500 dark:text-white/55">
-              Three tank product families, engineered by application rather
-              than picked off a fixed size chart.
+              Storage tanks for water, fuel and chemicals, engineered by
+              application rather than picked off a fixed size chart.
             </p>
           </div>
           <Link
             href="/services/tank-solutions"
             className="inline-block border-b border-brand text-sm font-semibold text-brand transition-colors hover:border-brand-dark hover:text-brand-dark"
           >
-            View Tank Solutions
+            View all tank solutions
           </Link>
         </div>
 
@@ -65,43 +90,35 @@ export default function ProductsSection() {
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
           variants={grid}
-          className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3"
+          className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3"
         >
-          {products.map((p) => {
-            const Icon = p.icon;
-            return (
-              <motion.div
-                key={p.id}
-                variants={item}
-                className="group flex flex-col overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900"
+          {products.map((p) => (
+            <motion.div key={p.id} variants={item}>
+              <Link
+                href={p.href}
+                className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900"
               >
-                <div className="flex items-center justify-between bg-ink p-6 transition-colors duration-300 group-hover:bg-brand">
-                  <Icon size={28} strokeWidth={1.3} className="text-white/80" />
-                  <span className="text-right text-xs font-medium uppercase tracking-[0.06em] text-white/50">
-                    Capacity
-                  </span>
+                <div className="relative aspect-square overflow-hidden bg-mist dark:bg-neutral-800">
+                  <Image
+                    src={p.image}
+                    alt={p.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
 
-                <div className="flex flex-1 flex-col p-7">
-                  <span className="text-2xl font-normal tracking-[-0.02em] text-neutral-900 dark:text-white">
-                    {p.capacity}
-                  </span>
-                  <h3 className="mt-4 text-lg font-medium text-neutral-900 dark:text-white">
+                <div className="px-5 py-4 sm:px-6 sm:py-5">
+                  <h3 className="text-sm font-medium text-neutral-900 dark:text-white sm:text-base">
                     {p.title}
                   </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-500 dark:text-white/55">
-                    {p.use}
-                  </p>
                 </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
 
-        <p className="mt-6 text-xs leading-relaxed text-neutral-400 dark:text-white/35">
-          Capacity ranges shown are indicative — exact sizing is confirmed
-          with our engineers against your application.
-        </p>
+                <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-brand transition-all duration-300 group-hover:w-full" />
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

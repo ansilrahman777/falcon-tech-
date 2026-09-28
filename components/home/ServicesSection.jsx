@@ -288,13 +288,13 @@ export default function ServicesSection() {
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
       <div className="mx-auto w-full max-w-7xl px-5 py-17.5 sm:px-8 sm:py-20 lg:px-0 lg:py-23">
         <h2 className="max-w-lg text-[28px] font-normal leading-[1.15] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[34px]">
-          The full range, one contractor
+          Our Tank Solutions
         </h2>
-        <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-500 dark:text-white/55">
+        {/* <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-500 dark:text-white/55">
           Tank manufacturing, thermal insulation, restoration and lining, and
           industrial services — backed by inspection and quality assurance on
           every job across Saudi Arabia.
-        </p>
+        </p> */}
 
         {/* TAB BAR — moving indicator */}
         <div className="relative mt-10 flex gap-1 overflow-x-auto border-b border-neutral-200 dark:border-white/10">

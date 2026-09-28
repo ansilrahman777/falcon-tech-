@@ -6,7 +6,6 @@ import StatsCounter from "@/components/home/StatsCounter";
 import ShowcaseSlider from "@/components/home/ShowcaseSlider";
 import ServicesSection from "@/components/home/ServicesSection";
 import ProductsSection from "@/components/home/ProductsSection";
-import CapacityEstimator from "@/components/home/CapacityEstimator";
 import ManufacturingSection from "@/components/home/ManufacturingSection";
 import ProcessSteps from "@/components/home/ProcessSteps";
 import Testimonials from "@/components/home/Testimonials";
@@ -14,6 +13,7 @@ import CTASection from "@/components/home/CTASection";
 import ProjectsSection from "@/components/home/ProjectsSection";
 import BlogSection from "@/components/home/BlogSection";
 import LocationMap from "@/components/home/LocationMap";
+import SurveyScanningSection from "@/components/home/SurveyScanningSection";
 
 export default function Home() {
   return (
@@ -21,13 +21,13 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <StatsCounter />
-      <ServicesSection />
       <ProductsSection />
-      <CapacityEstimator />
-      <ManufacturingSection />
-      <ProjectsSection />
       <ShowcaseSlider />
+      <SurveyScanningSection />
+      <ServicesSection />
+      <ManufacturingSection />
       <ProcessSteps />
+      {/* <ProjectsSection /> */}
       <WhyChooseUs />
       <Testimonials />
       <CTASection />

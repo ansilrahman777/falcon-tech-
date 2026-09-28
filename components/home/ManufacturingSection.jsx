@@ -31,6 +31,27 @@ export default function ManufacturingSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative aspect-4/3 overflow-hidden rounded-sm border border-neutral-200 dark:border-white/10"
+        >
+          <Image
+            src="/assets/images/home/built.webp"
+            alt="Falcon Technologies manufacturing facility"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-ink/90 px-6 py-4 backdrop-blur-sm">
+            <span className="text-sm text-white/70">
+              Inspected before dispatch
+            </span>
+            <span className="text-lg font-semibold text-white">100%</span>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="max-w-md text-[28px] font-normal leading-[1.15] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[34px]">
@@ -45,7 +66,11 @@ export default function ManufacturingSection() {
           <ul className="mt-8 space-y-5">
             {capabilities.map((c) => (
               <li key={c.title} className="flex gap-3">
-                <CheckCircle2 size={18} strokeWidth={1.6} className="mt-0.5 shrink-0 text-brand" />
+                <CheckCircle2
+                  size={18}
+                  strokeWidth={1.6}
+                  className="mt-0.5 shrink-0 text-brand"
+                />
                 <div>
                   <p className="text-sm font-medium text-neutral-900 dark:text-white">
                     {c.title}
@@ -57,25 +82,6 @@ export default function ManufacturingSection() {
               </li>
             ))}
           </ul>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative aspect-[4/3] overflow-hidden rounded-sm border border-neutral-200 dark:border-white/10"
-        >
-          <Image
-            src="/assets/images/home/hero-slide-1.png"
-            alt="Falcon Technologies manufacturing facility"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-ink/90 px-6 py-4 backdrop-blur-sm">
-            <span className="text-sm text-white/70">Inspected before dispatch</span>
-            <span className="text-lg font-semibold text-white">100%</span>
-          </div>
         </motion.div>
       </div>
     </section>

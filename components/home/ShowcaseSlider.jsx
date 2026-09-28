@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import showcaseSlides from "@/data/showcaseSlides";
 
-const AUTOPLAY_MS = 6000;
+const AUTOPLAY_MS = 4000;
 
 // A text block that starts hidden behind a solid mask, which then slides
 // away (like a curtain) to reveal the content — matches the reference's
@@ -53,7 +53,7 @@ export default function ShowcaseSlider() {
     <section
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
-      className="relative h-svh min-h-144 w-full overflow-hidden bg-neutral-100"
+      className="relative h-screen min-h-144 w-full overflow-hidden bg-neutral-100"
     >
       {/* ---------- Background photo, desaturated, with a left-to-right
            wipe curtain that reveals each incoming slide ---------- */}
@@ -72,7 +72,7 @@ export default function ShowcaseSlider() {
               alt={slide.heading.join(" ")}
               fill
               priority={index === 0}
-              className="object-cover grayscale-[0.75] contrast-110"
+              className="object-cover"
             />
             {/* fade the image into the page background on the left so text
                 stays readable, matching the reference's soft left edge */}
@@ -175,7 +175,7 @@ export default function ShowcaseSlider() {
                 <RevealMask
                   as="h2"
                   delay={0.55}
-                  className="text-3xl font-extrabold uppercase leading-[1.15] text-neutral-900 sm:text-4xl lg:text-[2.6rem]"
+                  className="text-3xl font-extrabold uppercase leading-[1.15] text-neutral-900 sm:text-3xl lg:text-4xl"
                 >
                   {slide.heading.map((line) => (
                     <span key={line} className="block">
@@ -184,11 +184,11 @@ export default function ShowcaseSlider() {
                   ))}
                 </RevealMask>
 
-                <RevealMask delay={0.75} className="mt-4">
+                {/* <RevealMask delay={0.75} className="mt-4">
                   <p className="text-base leading-relaxed text-neutral-600">
                     {slide.description}
                   </p>
-                </RevealMask>
+                </RevealMask> */}
 
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -215,7 +215,7 @@ export default function ShowcaseSlider() {
       {/* ---------- Thumbnail navigator, bottom-right, aligned to the same
            max-w-7xl container as the text content ---------- */}
       <div className="absolute inset-x-0 bottom-6 z-30 hidden justify-center sm:flex">
-        <div className="flex w-full max-w-7xl justify-end gap-2 px-6 lg:px-16">
+        <div className="flex w-full max-w-7xl justify-center gap-2 px-6 lg:px-16">
           {showcaseSlides.map((s, i) => (
             <button
               key={s.id}
@@ -225,12 +225,7 @@ export default function ShowcaseSlider() {
                 i === index ? "border-red-600" : "border-transparent"
               }`}
             >
-              <Image
-                src={s.thumb}
-                alt=""
-                fill
-                className="object-cover grayscale-[0.6]"
-              />
+              <Image src={s.thumb} alt="" fill className="object-cover" />
             </button>
           ))}
         </div>

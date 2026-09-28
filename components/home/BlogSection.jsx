@@ -13,7 +13,7 @@ const posts = [
     excerpt:
       "Discover how application engineering, material selection and manufacturing quality come together to deliver dependable storage solutions.",
     date: "August 18, 2026",
-    image: "/assets/images/home/blog.webp",
+    image: "/assets/images/blog/blog-1.webp",
     href: "/blog/engineering-excellence-tank-systems",
   },
   {
@@ -23,7 +23,7 @@ const posts = [
     excerpt:
       "A practical look at the key factors that influence tank selection, including capacity, stored media, temperature and site conditions.",
     date: "August 10, 2026",
-    image: "/assets/images/home/blog.webp",
+    image: "/assets/images/blog/blog-2.webp",
     href: "/blog/choosing-right-tank-system",
   },
   {
@@ -33,7 +33,7 @@ const posts = [
     excerpt:
       "Regular inspection and timely restoration can extend service life, protect stored materials and reduce unexpected operational costs.",
     date: "August 02, 2026",
-    image: "/assets/images/home/blog.webp",
+    image: "/assets/images/blog/blog-3.webp",
     href: "/blog/tank-inspection-restoration",
   },
 ];

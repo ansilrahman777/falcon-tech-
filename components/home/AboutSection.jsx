@@ -40,8 +40,7 @@ export default function AboutSection() {
                 ABOUT OUR COMPANY
               </span>
             </motion.div>
-
-            {/* Heading */}
+            {/* Heading */}{" "}
             <motion.h2
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -53,36 +52,39 @@ export default function AboutSection() {
               }}
               className="mt-5 max-w-4xl text-[34px] font-normal leading-[1.08] tracking-[-0.045em] text-neutral-800 dark:text-white sm:text-[40px] md:text-[46px] lg:text-[48px] xl:text-[56px]"
             >
-              Industrial Solutions Built Around{" "}
-              <span className="whitespace-nowrap">Engineering & Trust</span>
-            </motion.h2>
-
-            {/* Description */}
+              {" "}
+              Tank Manufacturing Built Around{" "}
+              <span className="whitespace-nowrap">
+                Quality & Performance
+              </span>{" "}
+            </motion.h2>{" "}
+            {/* Description */}{" "}
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.6,
-                delay: 0.15,
-              }}
+              transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-7 max-w-3xl"
             >
+              {" "}
               <p className="text-[15px] leading-[1.65] tracking-[-0.01em] text-neutral-600 dark:text-white/60 sm:text-[16px] lg:text-[17px]">
-                Falcon Technologies provides engineered industrial solutions
-                spanning tank systems, manufacturing, supply, installation,
-                inspection, restoration, rehabilitation, thermal insulation,
-                tank lining, chiller installation and maintenance, and selected
-                industrial support services.
-              </p>
-
+                {" "}
+                We manufacture high-performance storage tanks for water,
+                chemicals, chilled water, fire protection and industrial
+                applications. From FRP and GRP tanks to underground and
+                specialized storage systems, every product is manufactured with
+                careful attention to material selection, construction quality
+                and long-term durability.{" "}
+              </p>{" "}
               <p className="mt-4 text-[15px] leading-[1.65] tracking-[-0.01em] text-neutral-600 dark:text-white/60 sm:text-[16px] lg:text-[17px]">
-                Our approach combines practical engineering, controlled
-                execution and technical documentation to support customers
-                across Saudi Arabia and the GCC.
-              </p>
+                {" "}
+                Our manufacturing approach combines engineering knowledge,
+                controlled production and quality-focused processes to deliver
+                storage solutions built around the capacity, application and
+                site requirements of customers across Saudi Arabia and the
+                GCC.{" "}
+              </p>{" "}
             </motion.div>
-
             {/* FEATURES */}
             <div className="mt-10 max-w-2xl sm:mt-12">
               {features.map((feature, index) => {
@@ -127,7 +129,6 @@ export default function AboutSection() {
                 );
               })}
             </div>
-
             {/* CTA */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -168,7 +169,7 @@ export default function AboutSection() {
             className="relative h-105 w-full sm:h-130 lg:col-span-5 lg:h-155 xl:h-170"
           >
             <Image
-              src="/assets/images/home/falcon-tech-ksa-about.webp"
+              src="/assets/images/home/about.webp"
               alt="Falcon engineers on an industrial site"
               fill
               priority={false}

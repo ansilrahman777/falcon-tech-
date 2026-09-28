@@ -71,9 +71,9 @@ export default function ProjectsSection() {
           {/* EYEBROW */}
           <div className=" text-[11px] font-medium uppercase tracking-[0.18em] text-brand sm:text-[12px] "></div>
           {/* MAIN HEADING */}
-          <h2 className=" mt-4 text-4xl font-normal leading-[1.08] tracking-[-0.045em] text-[#242424] sm:text-2xl lg:text-6xl ">
+          {/* <h2 className=" mt-4 text-4xl font-normal leading-[1.08] tracking-[-0.045em] text-[#242424] sm:text-2xl lg:text-6xl ">
             Explore Recent Projects
-          </h2>
+          </h2> */}
         </motion.div>
         {/* ===================================================== PROJECT AREA ====================================================== */}
         <div

@@ -5,7 +5,8 @@ import Footer from "@/components/common/Footer";
 import ThemeProvider from "@/components/providers/ThemeProvider";
 
 export const metadata = {
-  title: "Falcon Technologies | Tanks, Insulation & Industrial Solutions - Saudi Arabia",
+  title:
+    "Falcon Technologies | Tanks, Insulation & Industrial Solutions - Saudi Arabia",
   description:
     "Falcon Technologies delivers engineered tank systems, thermal insulation, tank lining and restoration, and chiller installation and maintenance for industrial clients across Saudi Arabia and the GCC.",
 };
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col bg-white text-black dark:bg-[#0a0a0a] dark:text-white transition-colors duration-300">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
         >

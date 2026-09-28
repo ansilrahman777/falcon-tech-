@@ -7,7 +7,7 @@ const showcaseSlides = [
     ctaLabel: "Explore FRP Tanks",
     ctaHref: "/services/frp-tanks",
     image: "/assets/images/home/showcase-1.webp",
-    thumb: "/assets/images/home/Showcase-1.webp",
+    thumb: "/assets/images/home/showcase-1.webp",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const showcaseSlides = [
     ctaLabel: "Explore Underground Tanks",
     ctaHref: "/services/underground-tanks",
     image: "/assets/images/home/showcase-2.webp",
-    thumb: "/assets/images/home/Showcase-2.webp",
+    thumb: "/assets/images/home/showcase-2.webp",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const showcaseSlides = [
     ctaLabel: "Explore Chilled Water Tanks",
     ctaHref: "/services/insulated-chilled-water-storage-tanks",
     image: "/assets/images/home/showcase-3.webp",
-    thumb: "/assets/images/home/Showcase-3.webp",
+    thumb: "/assets/images/home/showcase-3.webp",
   },
 
   {
@@ -38,7 +38,7 @@ const showcaseSlides = [
     ctaLabel: "Explore Fire Retardant Tanks",
     ctaHref: "/services/fire-retardant-tanks",
     image: "/assets/images/home/showcase-4.webp",
-    thumb: "/assets/images/home/Showcase-4.webp",
+    thumb: "/assets/images/home/showcase-4.webp",
   },
 ];
 

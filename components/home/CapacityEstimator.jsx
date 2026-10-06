@@ -17,20 +17,38 @@ function recommend(liquid, capacity) {
   }
   if (liquid === "Diesel / Fuel") {
     return cap > 20000
-      ? { material: "Steel Tank System", note: "Larger fuel storage is typically fabricated in steel with supports and skids." }
-      : { material: "Steel or FRP/GRP Tank", note: "Either construction can suit this size — site conditions decide the final choice." };
+      ? {
+          material: "Steel Tank System",
+          note: "Larger fuel storage is typically fabricated in steel with supports and skids.",
+        }
+      : {
+          material: "Steel or FRP/GRP Tank",
+          note: "Either construction can suit this size — site conditions decide the final choice.",
+        };
   }
   if (liquid === "Wastewater") {
-    return { material: "FRP / GRP Tank", note: "FRP handles wastewater and process liquids well across most capacities." };
+    return {
+      material: "FRP / GRP Tank",
+      note: "FRP handles wastewater and process liquids well across most capacities.",
+    };
   }
   // Water
   if (cap > 0 && cap <= 5000) {
-    return { material: "Polyethylene Tank", note: "LLDPE/HDPE is a cost-effective fit at this capacity." };
+    return {
+      material: "Polyethylene Tank",
+      note: "LLDPE/HDPE is a cost-effective fit at this capacity.",
+    };
   }
   if (cap > 5000 && cap <= 50000) {
-    return { material: "Polyethylene or FRP/GRP Tank", note: "Both are viable — layout and site access often decide." };
+    return {
+      material: "Polyethylene or FRP/GRP Tank",
+      note: "Both are viable — layout and site access often decide.",
+    };
   }
-  return { material: "FRP / GRP or Steel Tank", note: "Larger water storage is usually FRP/GRP or steel, sized to your site." };
+  return {
+    material: "FRP / GRP or Steel Tank",
+    note: "Larger water storage is usually FRP/GRP or steel, sized to your site.",
+  };
 }
 
 export default function CapacityEstimator() {
@@ -48,9 +66,9 @@ export default function CapacityEstimator() {
               Not Sure What Tank You Need?
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/55">
-              Tell us what you&rsquo;re storing and roughly how much — we&rsquo;ll
-              point you to a starting material. Our engineers confirm the
-              final specification.
+              Tell us what you're storing and roughly how much — we'll point you
+              to a starting material. Our engineers confirm the final
+              specification.
             </p>
           </div>
 
@@ -75,7 +93,10 @@ export default function CapacityEstimator() {
               ))}
             </div>
 
-            <label htmlFor="capacity" className="mt-6 block text-xs font-medium uppercase tracking-[0.08em] text-white/40">
+            <label
+              htmlFor="capacity"
+              className="mt-6 block text-xs font-medium uppercase tracking-[0.08em] text-white/40"
+            >
               Approximate capacity (liters)
             </label>
             <input
@@ -108,7 +129,10 @@ export default function CapacityEstimator() {
                 className="group mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand"
               >
                 Get an Exact Quote
-                <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight
+                  size={15}
+                  className="transition-transform group-hover:translate-x-0.5"
+                />
               </Link>
             </div>
           </div>

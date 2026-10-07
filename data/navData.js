@@ -190,52 +190,57 @@ const navData = [
     ],
   },
 
-  {
-    label: "Engineering & Quality",
-    href: "/engineering",
-    submenu: [
-      {
-        label: "Engineering Capabilities",
-        href: "/engineering",
-      },
-      {
-        label: "Application Engineering",
-        href: "/engineering/application-engineering",
-      },
-      {
-        label: "Material Selection",
-        href: "/engineering/material-selection",
-      },
-      {
-        label: "Design & Drawings",
-        href: "/engineering/design-drawings",
-      },
-      {
-        label: "Manufacturing Engineering",
-        href: "/engineering/manufacturing-engineering",
-      },
-      {
-        label: "QA / QC",
-        href: "/engineering/qa-qc",
-      },
-      {
-        label: "Inspection & Testing",
-        href: "/engineering/inspection-testing",
-      },
-      {
-        label: "Standards & Compliance",
-        href: "/engineering/standards-compliance",
-      },
-      {
-        label: "Certifications",
-        href: "/engineering/certifications",
-      },
-    ],
-  },
+  // {
+  //   label: "Engineering & Quality",
+  //   href: "/engineering",
+  //   submenu: [
+  //     {
+  //       label: "Engineering Capabilities",
+  //       href: "/engineering",
+  //     },
+  //     {
+  //       label: "Application Engineering",
+  //       href: "/engineering/application-engineering",
+  //     },
+  //     {
+  //       label: "Material Selection",
+  //       href: "/engineering/material-selection",
+  //     },
+  //     {
+  //       label: "Design & Drawings",
+  //       href: "/engineering/design-drawings",
+  //     },
+  //     {
+  //       label: "Manufacturing Engineering",
+  //       href: "/engineering/manufacturing-engineering",
+  //     },
+  //     {
+  //       label: "QA / QC",
+  //       href: "/engineering/qa-qc",
+  //     },
+  //     {
+  //       label: "Inspection & Testing",
+  //       href: "/engineering/inspection-testing",
+  //     },
+  //     {
+  //       label: "Standards & Compliance",
+  //       href: "/engineering/standards-compliance",
+  //     },
+  //     {
+  //       label: "Certifications",
+  //       href: "/engineering/certifications",
+  //     },
+  //   ],
+  // },
 
   {
     label: "Projects",
     href: "/projects",
+  },
+
+  {
+    label: "Gallery",
+    href: "/gallery",
   },
 
   {
@@ -274,7 +279,7 @@ const navData = [
   },
 
   {
-    label: "Contact",
+    label: "Contact Us",
     href: "/contact-us",
   },
 

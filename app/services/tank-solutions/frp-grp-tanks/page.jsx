@@ -247,14 +247,6 @@ export default function Page() {
               <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Manufacturing plants</span>
               <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Construction &amp; infrastructure</span>
               </div>
-            <h2 className="mt-10 text-lg font-normal tracking-[-0.02em] text-neutral-900 dark:text-white">Referenced Standards</h2>
-            <div className="mt-5 flex flex-wrap gap-2">
-              <span className="rounded-sm bg-ink px-3 py-1.5 text-xs font-medium text-white">ASTM D3299</span>
-              <span className="rounded-sm bg-ink px-3 py-1.5 text-xs font-medium text-white">ASTM D4097</span>
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-neutral-400 dark:text-white/35">
-              Applied as applicable to the product, governing standard and project specification.
-            </p>
             </div>
           </div>
         </div>
@@ -289,6 +281,75 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+          <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Reference Sizes</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">Documented configurations we can reference as a starting point — confirmed per project, not a committed availability.</p>
+
+          <dl className="mt-8 max-w-3xl divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
+            <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.8fr] sm:gap-6">
+              <dt className="text-sm font-medium text-neutral-800 dark:text-white/85">Underground diesel (FRP)</dt>
+              <dd className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">20,000 L — Ø2,500 mm × 4,350 mm long; 30,000 L — Ø2,500 mm × 6,400 mm long.</dd>
+            </div>
+            <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.8fr] sm:gap-6">
+              <dt className="text-sm font-medium text-neutral-800 dark:text-white/85">Aboveground horizontal (FRP)</dt>
+              <dd className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">100,000 L reference — Ø3.50 m × 11 m long × 4.00 m high.</dd>
+            </div>
+          </dl>
+          <p className="mt-4 max-w-3xl border-l-2 border-brand pl-4 text-xs leading-relaxed text-neutral-400 dark:text-white/40">Indicative reference configurations from prior project and design context — not a committed catalogue range or current availability. Final capacity and dimensions are confirmed against the approved drawing and QA file for each project.</p>
+        </div>
+      </section>
+
+      <section className="w-full bg-white dark:bg-neutral-950">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+          <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Standards &amp; Compliance</h2>
+          <dl className="mt-8 max-w-3xl divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
+            <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.8fr] sm:gap-6">
+              <dt className="text-sm font-medium text-neutral-800 dark:text-white/85">ASTM D3299-26</dt>
+              <dd className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">Filament-wound FRP corrosion-resistant tanks, within its scope and design conditions.</dd>
+            </div>
+            <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.8fr] sm:gap-6">
+              <dt className="text-sm font-medium text-neutral-800 dark:text-white/85">ASTM D4097-19</dt>
+              <dd className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">Contact-molded FRP tanks; the 2019 edition is marked withdrawn by ASTM in 2026 — confirm the current project-approved basis.</dd>
+            </div>
+            <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.8fr] sm:gap-6">
+              <dt className="text-sm font-medium text-neutral-800 dark:text-white/85">AWWA D120-19(R25)</dt>
+              <dd className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">Thermosetting FRP tanks for water service — confirm purchaser requirements and exact scope.</dd>
+            </div>
+            <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.8fr] sm:gap-6">
+              <dt className="text-sm font-medium text-neutral-800 dark:text-white/85">AWWA D121-24</dt>
+              <dd className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">Bolted aboveground FRP panel-type tanks for water storage (not a blanket FRP standard).</dd>
+            </div>
+          </dl>
+          <p className="mt-4 max-w-3xl border-l-2 border-brand pl-4 text-xs leading-relaxed text-neutral-400 dark:text-white/40">A standard reference is not proof of third-party certification. Falcon states “designed and manufactured to” a standard only when it is backed by the controlled design and QA file; chemical, potable-water and underground suitability require separate product-specific evidence. Saudi/GCC approvals (SASO/SABER, Civil Defense, environmental, municipal, utility and owner approvals) are project- and product-specific.</p>
+        </div>
+      </section>
+
+      <section className="w-full bg-neutral-50 dark:bg-neutral-900">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+          <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Accessories &amp; Fittings</h2>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Access / manway</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Inlet / outlet</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Overflow</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Vent</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Drain</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Level gauge / transmitter</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Ladder, platform &amp; handrails</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Lifting lugs</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Hold-downs / anchors</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Baffles</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Sample point</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Instrument ports</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Pump / filter / skid</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Leak monitoring</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Grounding / instrumentation</span>
+            <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Interstitial monitoring (double-wall)</span>
+          </div>
+          <p className="mt-4 max-w-2xl text-xs leading-relaxed text-neutral-400 dark:text-white/40">Nozzle size, material, reinforcement and orientation are set in the nozzle schedule for each tank. Accessories are fitted as the service requires.</p>
+        </div>
+      </section>
+
+      <section className="w-full bg-white dark:bg-neutral-950">
         <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Frequently Asked Questions</h2>
           <div className="mt-8 max-w-3xl border-t border-neutral-200 dark:border-white/10">

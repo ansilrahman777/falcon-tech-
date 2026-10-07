@@ -2,6 +2,8 @@ import "./globals.css";
 
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import QuickContact from "@/components/common/QuickContact";
+import ScrollToTop from "@/components/common/ScrollToTop";
 import ThemeProvider from "@/components/providers/ThemeProvider";
 
 export const metadata = {
@@ -26,6 +28,9 @@ export default function RootLayout({ children }) {
           <main className="flex-1">{children}</main>
 
           <Footer />
+
+          <QuickContact />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

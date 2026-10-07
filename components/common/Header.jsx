@@ -74,6 +74,9 @@ export default function Header() {
   }, []);
 
   const solid = scrolled || activeMenu !== null;
+  // At the top of the page the header is transparent and its text/logo are
+  // white, sitting on the dark top-gradient below. Dark text/logo only kick in
+  // once the bar turns solid (scrolled or a submenu open) in light theme.
   const lightSurface = mounted && solid && resolvedTheme === "light";
 
   const logoSrc = lightSurface ? LOGO_BLACK : LOGO_WHITE;
@@ -105,7 +108,7 @@ export default function Header() {
             ? lightSurface
               ? "bg-white/90 backdrop-blur-md border-b border-black/10"
               : "bg-black/80 backdrop-blur-md border-b border-white/10"
-            : "bg-linear-to-b from-black/60 to-transparent"
+            : "bg-linear-to-b from-black/50 via-black/10 via-90% to-transparent"
         }`}
       >
         {/* Top row: lang | logo | theme toggle */}
@@ -180,7 +183,7 @@ export default function Header() {
 
         {/* Main nav row */}
         <nav
-          className={`hidden md:flex items-center justify-center gap-10 border-t py-3 ${
+          className={`hidden md:flex items-center justify-center gap-6 lg:gap-9 border-t py-3 ${
             lightSurface ? "border-black/5" : "border-white/5"
           }`}
         >
@@ -191,7 +194,7 @@ export default function Header() {
             >
               <Link
                 href={item.href}
-                className={`relative text-sm font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:transition-all after:duration-300 ${textClass} ${underlineClass} ${
+                className={`relative text-base md:text-sm lg:text-lg font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:transition-all after:duration-300 ${textClass} ${underlineClass} ${
                   hoveredIdx === idx ? "after:w-full" : "after:w-0"
                 }`}
               >

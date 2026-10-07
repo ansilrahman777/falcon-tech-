@@ -21,6 +21,7 @@ const labelClass =
 
 const initialState = {
   name: "",
+  company: "",
   email: "",
   phone: "",
   subject: "General Enquiry",
@@ -124,6 +125,18 @@ export default function ContactForm() {
           />
         </div>
         <div>
+          <label htmlFor="cf-company" className={labelClass}>
+            Company
+          </label>
+          <input
+            id="cf-company"
+            value={form.company}
+            onChange={update("company")}
+            className={inputClass}
+            autoComplete="organization"
+          />
+        </div>
+        <div>
           <label htmlFor="cf-phone" className={labelClass}>
             Phone / WhatsApp
           </label>
@@ -134,7 +147,7 @@ export default function ContactForm() {
             className={inputClass}
           />
         </div>
-        <div className="sm:col-span-2">
+        <div>
           <label htmlFor="cf-email" className={labelClass}>
             Email *
           </label>

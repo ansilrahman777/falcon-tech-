@@ -1,13 +1,6 @@
 import Link from "next/link";
 
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock3,
-  ArrowUpRight,
-  ArrowUp,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock3, ArrowUpRight } from "lucide-react";
 
 import {
   FaFacebookF,
@@ -62,6 +55,10 @@ const quickLinks = [
     href: "/projects",
   },
   {
+    name: "Gallery",
+    href: "/gallery",
+  },
+  {
     name: "Technical Library",
     href: "/technical-library",
   },
@@ -113,7 +110,7 @@ export default function Footer() {
             sm:grid-cols-2
             sm:gap-x-10
             sm:gap-y-14
-            lg:grid-cols-[1.15fr_1fr_0.9fr_1.15fr]
+            lg:grid-cols-[1.45fr_1fr_0.9fr_1.15fr]
             lg:gap-14
             lg:py-16
           "
@@ -123,19 +120,17 @@ export default function Footer() {
           ================================================== */}
 
           <div>
-            <Link href="/" className="group inline-flex items-center">
-              <div className="flex items-center gap-3">
-                {/* Logo mark */}
-
-                <Image
-                  src="/assets/logos/falcon-tech-ksa-white-logo.png"
-                  alt="Falcon Technologies KSA"
-                  width={2400}
-                  height={417}
-                  priority
-                  className="h-12 md:h-36 w-auto object-contain transition-opacity duration-300"
-                />
-              </div>
+            <Link href="/" className="group block">
+              {/* Logo mark — wide horizontal lockup, so it fills the column
+                  width (height follows the aspect ratio). */}
+              <Image
+                src="/assets/logos/falcon-tech-ksa-white-logo.png"
+                alt="Falcon Technologies KSA"
+                width={2400}
+                height={417}
+                priority
+                className="h-auto w-full max-w-[280px] md:max-w-[360px] object-contain object-left transition-opacity duration-300"
+              />
             </Link>
 
             <p
@@ -376,36 +371,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      {/* =====================================================
-          BACK TO TOP
-      ====================================================== */}
-
-      <a
-        href="#top"
-        aria-label="Back to top"
-        className="
-          absolute
-          bottom-4
-          right-5
-          hidden
-          h-12
-          w-12
-          items-center
-          justify-center
-          rounded-[3px]
-          bg-[#111214]
-          text-white/80
-          transition-all
-          duration-300
-          hover:bg-brand
-          hover:text-white
-          sm:flex
-          lg:right-7
-        "
-      >
-        <ArrowUp size={18} strokeWidth={2} />
-      </a>
     </footer>
   );
 }

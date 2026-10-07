@@ -63,7 +63,7 @@ export default function GalleryExplorer() {
               key={cat}
               type="button"
               onClick={() => setActive(cat)}
-              className={`rounded-full border px-4 py-2 text-md font-medium transition-colors ${
+              className={`rounded-full border px-4 py-2 text-xs font-medium transition-colors ${
                 active === cat
                   ? "border-brand bg-brand text-white"
                   : "border-neutral-300 text-neutral-600 hover:border-brand hover:text-brand dark:border-white/15 dark:text-white/60"
@@ -100,7 +100,7 @@ export default function GalleryExplorer() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-ink/80 via-ink/10 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
-                <span className="absolute left-3 top-3 rounded-sm bg-black/35 px-2 py-1 text-[10px] font-medium uppercase tracking-[0.06em] text-white/90 backdrop-blur-sm">
+                <span className="absolute left-3 top-3 rounded-sm bg-black/35 px-2 py-1 text-xs font-medium uppercase tracking-[0.06em] text-white/90 backdrop-blur-sm">
                   {item.category}
                 </span>
                 <span className="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-2">

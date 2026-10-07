@@ -129,14 +129,14 @@ export default function Footer() {
                 width={2400}
                 height={417}
                 priority
-                className="h-auto w-full max-w-[280px] md:max-w-[360px] object-contain object-left transition-opacity duration-300"
+                className="h-auto w-full max-w-xs md:max-w-sm object-contain object-left transition-opacity duration-300"
               />
             </Link>
 
             <p
               className="
                 max-w-xs
-                text-[14px]
+                text-sm
                 leading-[1.75]
                 text-white/55
               "
@@ -158,7 +158,7 @@ export default function Footer() {
                 gap-5
                 bg-brand
                 px-6
-                text-[12px]
+                text-xs
                 font-semibold
                 uppercase
                 tracking-[0.02em]
@@ -205,7 +205,7 @@ export default function Footer() {
                       group
                       flex
                       items-start
-                      text-[14px]
+                      text-sm
                       leading-[1.45]
                       text-white/55
                       transition-colors
@@ -253,7 +253,7 @@ export default function Footer() {
                       flex
                       items-center
                       gap-2
-                      text-[14px]
+                      text-sm
                       text-white/55
                       transition-colors
                       duration-200
@@ -324,7 +324,7 @@ export default function Footer() {
               className="
                 mt-5
                 inline-block
-                text-[13px]
+                text-sm
                 font-medium
                 text-brand
                 transition-colors
@@ -354,7 +354,7 @@ export default function Footer() {
             sm:justify-between
           "
         >
-          <p className="text-[12px] leading-5 text-white/40">
+          <p className="text-xs leading-5 text-white/40">
             © {new Date().getFullYear()}{" "}
             <span className="text-white/65">Falcon Technologies KSA</span>. All
             Rights Reserved.
@@ -378,7 +378,7 @@ export default function Footer() {
 function FooterHeading({ title }) {
   return (
     <div>
-      <h3 className="text-[21px] font-semibold leading-none tracking-tight text-white">
+      <h3 className="text-xl font-semibold leading-none tracking-tight text-white">
         {title}
       </h3>
 
@@ -396,7 +396,7 @@ function ContactItem({ icon: Icon, children, last = false }) {
     >
       <Icon size={21} strokeWidth={1.5} className="mt-px shrink-0 text-brand" />
 
-      <div className="text-[14px] leading-[1.55] text-white/55">{children}</div>
+      <div className="text-sm leading-[1.55] text-white/55">{children}</div>
     </div>
   );
 }

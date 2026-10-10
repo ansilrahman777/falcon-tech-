@@ -14,10 +14,13 @@ const navData = [
   {
     label: "Services",
     href: "/services",
+    variant: "cards",
     submenu: [
       {
         label: "Tank Solutions",
         href: "/services/tank-solutions",
+        image:
+          "/assets/images/tank-solutions/engineered_frp_tanks_in_saudi_facility.png",
         children: [
           {
             label: "FRP / GRP Tanks",
@@ -53,6 +56,7 @@ const navData = [
       {
         label: "Thermal Insulation",
         href: "/services/thermal-insulation",
+        image: "/assets/images/services/industrial-insulation.png",
         children: [
           {
             label: "Storage Tank Insulation",
@@ -80,6 +84,7 @@ const navData = [
       {
         label: "Tank Restoration & Lining",
         href: "/services/tank-restoration-lining",
+        image: "/assets/images/services/frp-tank-restoration.png",
         children: [
           {
             label: "Tank Restoration",
@@ -102,6 +107,14 @@ const navData = [
             href: "/services/tank-restoration-lining/waterproof-lining",
           },
           {
+            label: "Steel Tank Lining",
+            href: "/services/tank-restoration-lining/steel-tank-lining",
+          },
+          {
+            label: "Concrete Tank Lining",
+            href: "/services/tank-restoration-lining/concrete-tank-lining",
+          },
+          {
             label: "Corrosion Protection",
             href: "/services/tank-restoration-lining/corrosion-protection",
           },
@@ -111,6 +124,7 @@ const navData = [
       {
         label: "Industrial Services",
         href: "/services/industrial-services",
+        image: "/assets/images/services/mechanical-maintenance.png",
         children: [
           {
             label: "Tank Inspection",
@@ -138,12 +152,28 @@ const navData = [
       {
         label: "Surveying & 3D Scanning",
         href: "/services/survey-scanning",
+        image: "/assets/images/services/survey-scanning.png",
         children: [
-          { label: "3D Laser Scanning", href: "/services/survey-scanning/3d-laser-scanning" },
-          { label: "As-Built Survey", href: "/services/survey-scanning/as-built-survey" },
-          { label: "Scan to BIM", href: "/services/survey-scanning/scan-to-bim" },
-          { label: "BIM Modelling", href: "/services/survey-scanning/bim-modelling" },
-          { label: "Reverse Engineering", href: "/services/survey-scanning/reverse-engineering" },
+          {
+            label: "3D Laser Scanning",
+            href: "/services/survey-scanning/3d-laser-scanning",
+          },
+          {
+            label: "As-Built Survey",
+            href: "/services/survey-scanning/as-built-survey",
+          },
+          {
+            label: "Scan to BIM",
+            href: "/services/survey-scanning/scan-to-bim",
+          },
+          {
+            label: "BIM Modelling",
+            href: "/services/survey-scanning/bim-modelling",
+          },
+          {
+            label: "Reverse Engineering",
+            href: "/services/survey-scanning/reverse-engineering",
+          },
         ],
       },
     ],
@@ -152,30 +182,32 @@ const navData = [
   {
     label: "Surveying",
     href: "/services/survey-scanning",
+    variant: "cards",
     submenu: [
-      {
-        label: "Surveying & 3D Scanning",
-        href: "/services/survey-scanning",
-      },
       {
         label: "3D Laser Scanning",
         href: "/services/survey-scanning/3d-laser-scanning",
+        image: "/assets/images/services/3d-laser-scanning.jpg",
       },
       {
         label: "As-Built Survey",
         href: "/services/survey-scanning/as-built-survey",
+        image: "/assets/images/services/as-built-survey.jpg",
       },
       {
         label: "Scan to BIM",
         href: "/services/survey-scanning/scan-to-bim",
+        image: "/assets/images/services/scan-to-bim.jpg",
       },
       {
         label: "BIM Modelling",
         href: "/services/survey-scanning/bim-modelling",
+        image: "/assets/images/services/bim-modelling.jpg",
       },
       {
         label: "Reverse Engineering",
         href: "/services/survey-scanning/reverse-engineering",
+        image: "/assets/images/services/reverse-engineering-scanning.jpg",
       },
     ],
   },

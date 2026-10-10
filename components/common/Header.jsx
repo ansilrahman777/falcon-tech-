@@ -219,25 +219,54 @@ export default function Header() {
                   : "border-white/10 bg-black/40"
               }`}
             >
-              <div className="flex justify-center gap-10 px-12 py-6">
+              {/* Up to 6 items sit on one centred row; longer menus
+                  (Industries) become a left-aligned grid, 5 per row
+                  (4 per row below 1280px). */}
+              <div
+                className={`px-12 py-6 ${
+                  navData[activeMenu].submenu.length > 6
+                    ? "mx-auto grid w-fit grid-cols-4 gap-x-8 gap-y-6 xl:grid-cols-5"
+                    : "flex justify-center gap-10"
+                }`}
+              >
                 {navData[activeMenu].submenu.map((sub) =>
                   navData[activeMenu].variant === "cards" ? (
-                    <Link
-                      key={sub.label}
-                      href={sub.href}
-                      className="group w-44"
-                    >
-                      <div className="relative h-28 w-full overflow-hidden rounded-lg bg-black/5">
-                        <Image
-                          src={sub.image}
-                          alt={sub.label}
-                          fill
-                          sizes="176px"
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                      </div>
-                      <p className={`mt-2 text-sm ${textClass}`}>{sub.label}</p>
-                    </Link>
+                    <div key={sub.label} className="w-44">
+                      <Link href={sub.href} className="group block">
+                        <div className="relative h-28 w-full overflow-hidden rounded-lg bg-black/5">
+                          <Image
+                            src={sub.image}
+                            alt={sub.label}
+                            fill
+                            sizes="176px"
+                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                        </div>
+                        <p className={`mt-2 text-sm font-medium ${textClass}`}>
+                          {sub.label}
+                        </p>
+                      </Link>
+
+                      {/* Sub-services under the card (Services menu) */}
+                      {sub.children && (
+                        <ul className="mt-2 space-y-1.5">
+                          {sub.children.map((child) => (
+                            <li key={child.href}>
+                              <Link
+                                href={child.href}
+                                className={`block text-xs leading-snug transition-opacity ${
+                                  lightSurface
+                                    ? "text-black/60 hover:text-black"
+                                    : "text-white/60 hover:text-white"
+                                }`}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   ) : (
                     <Link
                       key={sub.label}

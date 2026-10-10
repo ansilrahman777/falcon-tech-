@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
@@ -32,6 +33,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSubOpen, setMobileSubOpen] = useState(null);
   const closeTimer = useRef(null);
+  const pathname = usePathname();
 
   useEffect(() => setMounted(true), []);
 
@@ -72,6 +74,29 @@ export default function Header() {
       setHoveredIdx(null);
     }, 150);
   }, []);
+
+  // Close the submenu immediately (used when a link inside it is clicked,
+  // so the user sees the new page instead of a menu that stays open).
+  const closeMenu = useCallback(() => {
+    clearTimeout(closeTimer.current);
+    setActiveMenu(null);
+    setHoveredIdx(null);
+  }, []);
+
+  // Any click on a link inside the nav row or submenu panel closes the panel
+  const closeOnLinkClick = useCallback(
+    (e) => {
+      if (e.target.closest("a")) closeMenu();
+    },
+    [closeMenu],
+  );
+
+  // Safety net: whenever the route changes, close every open menu
+  useEffect(() => {
+    closeMenu();
+    setMobileOpen(false);
+    setMobileSubOpen(null);
+  }, [pathname, closeMenu]);
 
   const solid = scrolled || activeMenu !== null;
   // At the top of the page the header is transparent and its text/logo are
@@ -183,6 +208,7 @@ export default function Header() {
 
         {/* Main nav row */}
         <nav
+          onClick={closeOnLinkClick}
           className={`hidden lg:flex items-center justify-center gap-4 xl:gap-5 2xl:gap-9 border-t py-3 ${
             lightSurface ? "border-black/5" : "border-white/5"
           }`}
@@ -213,6 +239,7 @@ export default function Header() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
               onMouseEnter={() => openMenu(activeMenu)}
+              onClick={closeOnLinkClick}
               className={`hidden lg:block border-t overflow-hidden ${
                 lightSurface
                   ? "border-black/10 bg-white/70"

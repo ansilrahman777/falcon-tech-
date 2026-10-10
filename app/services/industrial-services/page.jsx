@@ -1,69 +1,139 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
-  Wrench,
   ArrowUpRight,
   Factory,
   Flame,
+  Plus,
+  ScanLine,
   ShieldCheck,
 } from "lucide-react";
 import PageHero from "@/components/common/PageHero";
-import StandardsBar from "@/components/services/StandardsBar";
 import CTASection from "@/components/home/CTASection";
 
+// Title only — app/services/layout.jsx appends "| Falcon Technologies".
 export const metadata = {
-  title:
-    "Industrial Services & Chiller Installation in Saudi Arabia",
+  title: "Industrial Services & Chiller Installation in Saudi Arabia",
   description:
-    "Falcon Technologies provides tank inspection, industrial coating, survey and scanning, mechanical maintenance, and chiller installation and maintenance across Saudi Arabia, including Dammam.",
+    "Falcon Technologies provides tank inspection, industrial coating, mechanical maintenance, equipment support and chiller installation and maintenance across Saudi Arabia, including Dammam.",
 };
 
-const specs = [
-  [
-    "Tank inspection & coating",
-    "Visual, dimensional and thickness inspection with industrial coating and waterproofing",
-  ],
-  [
-    "Survey & scanning",
-    "3D scanning and survey support for existing assets and sites",
-  ],
-  [
-    "Mechanical maintenance",
-    "Mechanical maintenance and equipment support across site utilities",
-  ],
-  [
-    "Chiller installation & maintenance",
-    "New installation, commissioning, preventive maintenance, troubleshooting and service reports",
-  ],
+/* ------------------------------------------------------------------ */
+/* Content — edit freely; every block below renders from these lists.  */
+/* Same layout as the Tank Solutions page; all styling is in this file. */
+/* ------------------------------------------------------------------ */
+
+// First item is the large feature tile.
+const ranges = [
+  {
+    name: "Chiller Installation & Maintenance",
+    href: "/services/industrial-services/chiller-installation-maintenance",
+    image: "/assets/images/services/chiller-installation.png",
+    alt: "Industrial chiller being installed and commissioned on site",
+    meta: "3 service types",
+    desc: "New installation and commissioning, preventive maintenance, and troubleshooting and repair — with a service report after every visit.",
+  },
+  {
+    name: "Tank Inspection",
+    href: "/services/industrial-services/tank-inspection",
+    image: "/assets/images/services/tank-inspection.png",
+    alt: "Technician inspecting an industrial storage tank",
+    meta: "Visual, dimensional and thickness",
+    desc: "Condition checks that show what a tank needs before repair, lining or a change of duty.",
+  },
+  {
+    name: "Industrial Coating",
+    href: "/services/industrial-services/industrial-coating",
+    image: "/assets/images/services/industrial-coating.png",
+    alt: "Protective industrial coating being applied",
+    meta: "Coating and waterproofing",
+    desc: "Protective coatings for tanks, steelwork and plant.",
+  },
+  {
+    name: "Mechanical Maintenance",
+    href: "/services/industrial-services/mechanical-maintenance",
+    image: "/assets/images/services/mechanical-maintenance.png",
+    alt: "Mechanical maintenance on industrial equipment",
+    meta: "Site utilities and equipment",
+    desc: "Mechanical maintenance that keeps site utilities and equipment running.",
+  },
+  {
+    name: "Equipment Support",
+    href: "/services/industrial-services/equipment-support",
+    image: "/assets/images/services/equipment-support.png",
+    alt: "Engineer supporting industrial equipment on site",
+    meta: "Plant equipment",
+    desc: "Support for plant equipment, from installation to ongoing service.",
+  },
 ];
 
-const children = [
+// Comparison table: one column per option, one row per question.
+const compareColumns = [
   {
-    label: "Tank Inspection",
+    name: "Tank inspection",
     href: "/services/industrial-services/tank-inspection",
   },
   {
-    label: "Industrial Coating",
-    href: "/services/industrial-services/industrial-coating",
-  },
-  {
-    label: "Surveying & 3D Scanning",
-    href: "/services/survey-scanning",
-  },
-  {
-    label: "Mechanical Maintenance",
+    name: "Coating & maintenance",
     href: "/services/industrial-services/mechanical-maintenance",
   },
   {
-    label: "Equipment Support",
-    href: "/services/industrial-services/equipment-support",
-  },
-  {
-    label: "Chiller Installation & Maintenance",
+    name: "Chiller services",
     href: "/services/industrial-services/chiller-installation-maintenance",
   },
 ];
 
-const applications = [
+const comparison = [
+  [
+    "Call us when",
+    "You need to know a tank's condition before repair, lining or a change of duty",
+    "Steelwork, tanks or equipment need protecting or keeping in service",
+    "You're installing a new chiller, or an existing one needs servicing or repair",
+  ],
+  [
+    "What we do",
+    "Visual, dimensional and thickness inspection",
+    "Industrial coating, waterproofing, mechanical maintenance and equipment support",
+    "Installation, commissioning, preventive maintenance and troubleshooting",
+  ],
+  [
+    "Worked to",
+    "Approved procedures and project specifications",
+    "Approved method statements and project specifications",
+    "Manufacturer service manuals and procedures",
+  ],
+  [
+    "You receive",
+    "An inspection report",
+    "A documented handover",
+    "A service report after each visit",
+  ],
+];
+
+const process = [
+  {
+    title: "Scope review",
+    desc: "Equipment make and model, capacity, operating condition and service history are reviewed first.",
+  },
+  {
+    title: "Service plan",
+    desc: "Installation, maintenance or inspection scope is confirmed against manufacturer requirements.",
+  },
+  {
+    title: "Execution",
+    desc: "Work is carried out within Falcon's approved and authorised scope.",
+  },
+  {
+    title: "Inspection and testing",
+    desc: "Operating parameters and performance are checked against requirements.",
+  },
+  {
+    title: "Report and handover",
+    desc: "A service or inspection report is issued, with after-service support available.",
+  },
+];
+
+const industries = [
   "Manufacturing",
   "Commercial & Industrial Buildings",
   "Oil & Gas",
@@ -72,53 +142,18 @@ const applications = [
   "Food & Beverage",
 ];
 
-const standards = [
-  "Manufacturer Service Manuals",
-  "Approved Service Procedures",
-  "Project Specifications",
-  "Relevant Regulatory Requirements",
-];
-
-const process = [
-  {
-    step: "01",
-    title: "Scope Review",
-    desc: "Equipment make/model, capacity, operating condition and service history are reviewed first.",
-  },
-  {
-    step: "02",
-    title: "Service Plan",
-    desc: "Installation, maintenance or inspection scope is confirmed against manufacturer requirements.",
-  },
-  {
-    step: "03",
-    title: "Execution",
-    desc: "Work is carried out within Falcon's approved and authorized scope.",
-  },
-  {
-    step: "04",
-    title: "Inspection & Testing",
-    desc: "Operating parameters and performance are checked against requirements.",
-  },
-  {
-    step: "05",
-    title: "Reports & Handover",
-    desc: "A service or inspection report is issued, with after-service support available.",
-  },
+const tags = [
+  "Manufacturer service manuals",
+  "Approved service procedures",
+  "Project specifications",
+  "Relevant regulatory requirements",
 ];
 
 const related = [
   { label: "Tank Solutions", icon: Factory, href: "/services/tank-solutions" },
-  {
-    label: "Thermal Insulation",
-    icon: Flame,
-    href: "/services/thermal-insulation",
-  },
-  {
-    label: "Tank Restoration & Lining",
-    icon: ShieldCheck,
-    href: "/services/tank-restoration-lining",
-  },
+  { label: "Thermal Insulation", icon: Flame, href: "/services/thermal-insulation" },
+  { label: "Tank Restoration & Lining", icon: ShieldCheck, href: "/services/tank-restoration-lining" },
+  { label: "Surveying & 3D Scanning", icon: ScanLine, href: "/services/survey-scanning" },
 ];
 
 const faqs = [
@@ -142,25 +177,49 @@ const faqs = [
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "Industrial Services",
-  provider: { "@type": "Organization", name: "Falcon Technologies" },
-  areaServed: "Saudi Arabia",
-  name: "Industrial Services",
-  description:
-    "Tank inspection, industrial coating, mechanical maintenance and chiller installation and maintenance.",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Industrial Services",
+      name: "Industrial Services",
+      description:
+        "Tank inspection, industrial coating, mechanical maintenance, equipment support and chiller installation and maintenance.",
+      areaServed: "Saudi Arabia",
+      provider: { "@type": "Organization", name: "Falcon Technologies" },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Industrial services",
+        itemListElement: ranges.map((r) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: r.name, description: r.desc },
+        })),
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
 };
 
 export default function IndustrialServicesPage() {
+  const [feature, ...rest] = ranges;
+
   return (
     <div className="w-full overflow-hidden">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
       />
 
       <PageHero
-        eyebrow="Service — IS"
+        eyebrow="Services"
         title="Industrial Services"
         description="Inspection, mechanical maintenance and chiller installation & maintenance delivered by a single accountable team."
         breadcrumb="Industrial Services"
@@ -168,114 +227,220 @@ export default function IndustrialServicesPage() {
         imageAlt="Industrial storage tank inspection by Falcon Technologies site team"
       />
 
+      {/* ============ SERVICES — image-led index ============ */}
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:px-8 xl:px-0 lg:py-24">
-          <div>
-            <Wrench size={32} strokeWidth={1.3} className="text-brand" />
-            <h2 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
-              Industrial Site Support, Plus Chiller Installation & Maintenance
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-end lg:gap-16">
+            <h2 className="max-w-xl text-3xl font-normal leading-tight tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+              Inspection, maintenance and chiller services from one site team
             </h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">
-              Beyond tanks, Falcon supports the wider industrial site —
-              inspection, coating, survey and scanning, mechanical maintenance
-              and equipment support — plus new chiller installation,
-              commissioning, scheduled preventive maintenance and
-              troubleshooting, all within our approved and authorized scope.
+            <p className="max-w-xl text-base leading-relaxed text-neutral-600 dark:text-white/60">
+              Falcon reviews the equipment, its condition and service history first, then plans inspection, coating, maintenance or chiller work within its approved and authorised scope — with a report at the end of every job.
             </p>
-
-            <dl className="mt-10 max-w-xl divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
-              {specs.map(([term, detail]) => (
-                <div
-                  key={term}
-                  className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.6fr] sm:gap-4"
-                >
-                  <dt className="text-sm font-medium text-neutral-800 dark:text-white/85">
-                    {term}
-                  </dt>
-                  <dd className="text-sm leading-relaxed text-neutral-500 dark:text-white/50">
-                    {detail}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-
-            <p className="mt-6 max-w-xl text-xs leading-relaxed text-neutral-400 dark:text-white/35">
-              Falcon only advertises industrial and chiller services it is
-              technically equipped, licensed and authorized to execute.
-            </p>
-
-            <Link
-              href="/request-a-quote"
-              className="mt-8 inline-block border-b border-brand text-sm font-semibold text-brand transition-colors hover:border-brand-dark hover:text-brand-dark"
-            >
-              Request a Quote for Industrial Services
-            </Link>
           </div>
 
-          <div className="border border-neutral-200 bg-neutral-50 p-8 dark:border-white/10 dark:bg-neutral-900 sm:p-10">
-            <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-ink text-xs font-semibold text-white">
-              IS
-            </span>
-            <h2 className="mt-5 text-xl font-normal tracking-[-0.02em] text-neutral-900 dark:text-white">
-              What's Included
-            </h2>
-            <ul className="mt-6 divide-y divide-neutral-200 dark:divide-white/10">
-              {children.map((child) => (
-                <li key={child.href}>
-                  <Link
-                    href={child.href}
-                    className="group flex items-center justify-between gap-4 py-3.5 text-sm text-neutral-700 transition-colors hover:text-brand dark:text-white/70"
-                  >
-                    {child.label}
+          <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {/* Feature tile */}
+            <Link
+              href={feature.href}
+              className="group relative flex min-h-96 flex-col justify-end overflow-hidden rounded-sm bg-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:col-span-2 lg:row-span-2"
+            >
+              <Image
+                src={feature.image}
+                alt={feature.alt}
+                fill
+                priority
+                sizes="(min-width: 1024px) 66vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-ink via-ink/50 to-transparent" />
+              <div className="relative p-6 sm:p-10">
+                <p className="text-sm text-white/70">{feature.meta}</p>
+                <h3 className="mt-2 text-3xl font-normal tracking-tight text-white sm:text-4xl">
+                  {feature.name}
+                </h3>
+                <p className="mt-3 max-w-lg text-base leading-relaxed text-white/80">
+                  {feature.desc}
+                </p>
+                <span className="mt-6 inline-flex items-center gap-1.5 border-b border-white/60 pb-0.5 text-sm font-semibold text-white transition-colors group-hover:border-brand group-hover:text-white">
+                  View {feature.name}
+                  <ArrowUpRight
+                    size={15}
+                    className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </span>
+              </div>
+            </Link>
+
+            {/* Other services */}
+            {rest.map((r) => (
+              <Link
+                key={r.href}
+                href={r.href}
+                className="group relative flex min-h-72 flex-col justify-end overflow-hidden rounded-sm bg-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              >
+                <Image
+                  src={r.image}
+                  alt={r.alt}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-ink via-ink/45 to-transparent" />
+                <div className="relative p-6">
+                  <p className="text-sm text-white/70">{r.meta}</p>
+                  <h3 className="mt-1 flex items-center justify-between gap-3 text-xl font-normal tracking-tight text-white">
+                    {r.name}
                     <ArrowUpRight
-                      size={15}
-                      className="shrink-0 text-neutral-300 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand dark:text-white/25"
+                      size={18}
+                      className="shrink-0 text-white/70 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"
                     />
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/75">
+                    {r.desc}
+                  </p>
+                </div>
+              </Link>
+            ))}
+
+            {/* Help tile — fills the last row */}
+            <div className="flex flex-col justify-between rounded-sm bg-mist p-6 dark:bg-neutral-900 sm:p-8 md:col-span-2 lg:col-span-1">
+              <div>
+                <h3 className="text-2xl font-normal tracking-tight text-ink dark:text-white">
+                  Not sure what your equipment needs?
+                </h3>
+                <p className="mt-3 max-w-lg text-base leading-relaxed text-steel dark:text-white/60">
+                  Send the make, model and the problem you&rsquo;re seeing. We confirm the scope before anyone comes to site.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+                <Link
+                  href="/request-a-quote"
+                  className="inline-flex h-12 items-center rounded-sm bg-brand px-7 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                >
+                  Request a Quote
+                </Link>
+                <Link
+                  href="/contact-us"
+                  className="border-b border-ink/30 pb-0.5 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand dark:border-white/30 dark:text-white"
+                >
+                  Talk to an engineer
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* ============ COMPARISON ============ */}
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
-          <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
-            Industries That Rely on Falcon Support
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
+          <h2 className="max-w-xl text-3xl font-normal leading-tight tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+            Which service do you need?
           </h2>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {applications.map((a) => (
-              <div
-                key={a}
-                className="border border-neutral-200 bg-white px-5 py-4 text-sm font-medium text-neutral-700 dark:border-white/10 dark:bg-neutral-950 dark:text-white/70"
-              >
-                {a}
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-white/60">
+            A quick guide. We confirm the scope after reviewing the equipment and its service history.
+          </p>
+
+          {/* Phones: one stacked block per option */}
+          <div className="mt-10 space-y-8 md:hidden">
+            {compareColumns.map((m, mi) => (
+              <div key={m.name} className="border-t-2 border-ink pt-4 dark:border-white/40">
+                {m.href ? (
+                  <Link
+                    href={m.href}
+                    className="inline-flex items-center gap-1.5 text-xl font-normal tracking-tight text-neutral-900 dark:text-white"
+                  >
+                    {m.name}
+                    <ArrowUpRight size={16} className="text-neutral-400" />
+                  </Link>
+                ) : (
+                  <p className="text-xl font-normal tracking-tight text-neutral-900 dark:text-white">
+                    {m.name}
+                  </p>
+                )}
+                <dl className="mt-3 divide-y divide-neutral-200 dark:divide-white/10">
+                  {comparison.map(([label, ...cells]) => (
+                    <div key={label} className="py-3">
+                      <dt className="text-sm font-semibold text-neutral-800 dark:text-white/85">
+                        {label}
+                      </dt>
+                      <dd className="mt-1 text-sm leading-relaxed text-neutral-600 dark:text-white/60">
+                        {cells[mi]}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
             ))}
           </div>
+
+          {/* Tablet and up: side-by-side table */}
+          <div className="mt-10 hidden md:block">
+            <table className="w-full border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-ink dark:border-white/40">
+                  <th scope="col" className="w-1/4 py-4 pr-6 text-sm font-medium text-steel dark:text-white/50">
+                    <span className="sr-only">Question</span>
+                  </th>
+                  {compareColumns.map((m) => (
+                    <th key={m.name} scope="col" className="py-4 pr-6 align-bottom">
+                      {m.href ? (
+                        <Link
+                          href={m.href}
+                          className="group inline-flex items-center gap-1.5 text-xl font-normal tracking-tight text-neutral-900 transition-colors hover:text-brand dark:text-white"
+                        >
+                          {m.name}
+                          <ArrowUpRight
+                            size={16}
+                            className="text-neutral-400 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand"
+                          />
+                        </Link>
+                      ) : (
+                        <span className="text-xl font-normal tracking-tight text-neutral-900 dark:text-white">
+                          {m.name}
+                        </span>
+                      )}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {comparison.map(([label, ...cells]) => (
+                  <tr key={label} className="border-b border-neutral-200 dark:border-white/10">
+                    <th scope="row" className="py-5 pr-6 align-top text-sm font-semibold text-neutral-800 dark:text-white/85">
+                      {label}
+                    </th>
+                    {cells.map((c, i) => (
+                      <td key={i} className="py-5 pr-6 align-top text-sm leading-relaxed text-neutral-600 dark:text-white/60">
+                        {c}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
+      {/* ============ PROCESS (a real sequence, so numbered) ============ */}
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
-          <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
-            How We Deliver Service
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
+          <h2 className="max-w-xl text-3xl font-normal leading-tight tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+            From scope review to report
           </h2>
-          <ol className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
-            {process.map((p) => (
-              <li
-                key={p.step}
-                className="border-t border-neutral-200 pt-4 dark:border-white/10"
-              >
+          <ol className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+            {process.map((s, i) => (
+              <li key={s.title} className="border-t-2 border-ink pt-5 dark:border-white/30">
                 <span className="text-sm font-semibold text-brand">
-                  {p.step}
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-2 text-sm font-medium text-neutral-900 dark:text-white">
-                  {p.title}
+                <p className="mt-2 text-base font-medium text-neutral-900 dark:text-white">
+                  {s.title}
                 </p>
-                <p className="mt-1 text-sm leading-relaxed text-neutral-500 dark:text-white/55">
-                  {p.desc}
+                <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-white/60">
+                  {s.desc}
                 </p>
               </li>
             ))}
@@ -283,71 +448,88 @@ export default function IndustrialServicesPage() {
         </div>
       </section>
 
+      {/* ============ INDUSTRIES + STANDARDS ============ */}
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
-          <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
-            Frequently Asked Questions
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-8 xl:px-0 lg:py-24">
+          <div>
+            <h2 className="text-2xl font-normal tracking-tight text-neutral-900 dark:text-white">
+              Industries we support
+            </h2>
+            <ul className="mt-6 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-neutral-200 bg-neutral-200 dark:border-white/10 dark:bg-white/10 sm:grid-cols-2">
+              {industries.map((a) => (
+                <li key={a} className="bg-white px-5 py-4 text-sm font-medium text-neutral-800 dark:bg-neutral-950 dark:text-white/75">
+                  {a}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-normal tracking-tight text-neutral-900 dark:text-white">
+              Work carried out to
+            </h2>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {tags.map((s) => (
+                <span key={s} className="rounded-sm bg-ink px-3 py-1.5 text-sm font-medium text-white">
+                  {s}
+                </span>
+              ))}
+            </div>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-500 dark:text-white/45">
+              Falcon only performs services it is technically equipped, licensed and authorised to carry out, working to manufacturer procedures where applicable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ FAQ ============ */}
+      <section className="w-full bg-white dark:bg-neutral-950">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-3 lg:gap-16 lg:px-8 xl:px-0 lg:py-24">
+          <h2 className="text-3xl font-normal leading-tight tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+            Frequently asked questions
           </h2>
-          <div className="mt-8 divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
+          <div className="border-t border-neutral-200 dark:border-white/10 lg:col-span-2">
             {faqs.map((f) => (
-              <div key={f.q} className="py-5">
-                <p className="text-sm font-medium text-neutral-900 dark:text-white">
+              <details key={f.q} className="group border-b border-neutral-200 py-5 dark:border-white/10">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base font-medium text-neutral-900 dark:text-white [&::-webkit-details-marker]:hidden">
                   {f.q}
-                </p>
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">
+                  <Plus
+                    size={18}
+                    className="shrink-0 text-neutral-400 transition-transform duration-300 group-open:rotate-45"
+                  />
+                </summary>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-white/60">
                   {f.a}
                 </p>
-              </div>
+              </details>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-8 xl:px-0">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-neutral-400 dark:text-white/40">
-            Referenced Standards
-          </h2>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {standards.map((s) => (
-              <span
-                key={s}
-                className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60"
-              >
-                {s}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* ============ RELATED ============ */}
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
         <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
-          <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
-            Related Services
+          <h2 className="text-2xl font-normal tracking-tight text-neutral-900 dark:text-white">
+            Related services
           </h2>
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {related.map((r) => {
               const Icon = r.icon;
               return (
                 <Link
                   key={r.href}
                   href={r.href}
-                  className="group flex items-center justify-between border border-neutral-200 bg-white p-6 transition-colors hover:border-brand dark:border-white/10 dark:bg-neutral-950"
+                  className="group flex items-center justify-between gap-3 border border-neutral-200 bg-white p-6 transition-colors hover:border-brand dark:border-white/10 dark:bg-neutral-950"
                 >
                   <span className="flex items-center gap-3">
-                    <Icon
-                      size={20}
-                      strokeWidth={1.4}
-                      className="text-steel dark:text-white/40"
-                    />
+                    <Icon size={20} strokeWidth={1.4} className="text-steel dark:text-white/40" />
                     <span className="text-sm font-medium text-neutral-800 dark:text-white/80">
                       {r.label}
                     </span>
                   </span>
                   <ArrowUpRight
                     size={16}
-                    className="text-neutral-300 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand dark:text-white/25"
+                    className="shrink-0 text-neutral-300 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand dark:text-white/25"
                   />
                 </Link>
               );
@@ -356,7 +538,6 @@ export default function IndustrialServicesPage() {
         </div>
       </section>
 
-      <StandardsBar />
       <CTASection />
     </div>
   );

@@ -33,7 +33,7 @@ const steps = [
 export default function ProcessSteps() {
   return (
     <section className="relative w-full overflow-hidden bg-white py-16 dark:bg-neutral-950 sm:py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-0">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-8 xl:px-0">
         <div className="mx-auto max-w-2xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 12 }}

@@ -23,11 +23,11 @@ export default function Page() {
         title="Diesel / Fuel Tanks"
         description="Generator diesel tanks, underground diesel tanks and industrial fuel storage in steel or FRP/GRP."
         breadcrumb="Diesel / Fuel Tanks"
-        image="/assets/images/home/hero-slide-1.png"
+        image="/assets/images/tank-solutions/fuel_storage_solutions_industrial_yard.png"
       />
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
             <div>
               <a
@@ -37,9 +37,9 @@ export default function Page() {
                 <ArrowLeft size={13} />
                 Tank Solutions
               </a>
-              <h1 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
+              <h2 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
                 Diesel and Fuel Tanks for Industrial and Commercial Sites
-              </h1>
+              </h2>
               <div className="mt-5 max-w-xl space-y-4">
               <p className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">
                 Reliable fuel storage keeps generators, plant and fleets running. Falcon supplies diesel and fuel tanks for generator sets, underground installations and larger industrial storage, in steel or FRP/GRP depending on capacity, location and specification.
@@ -64,7 +64,7 @@ export default function Page() {
               </div>
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-sm border border-neutral-200 bg-neutral-100 dark:border-white/10 dark:bg-neutral-900">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Diesel / Fuel Tanks by Falcon Technologies in Saudi Arabia" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+              <Image src="/assets/images/tank-solutions/fuel_storage_solutions_industrial_yard.png" alt="Diesel / Fuel Tanks by Falcon Technologies in Saudi Arabia" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
               <span className="absolute bottom-4 left-4 rounded-sm bg-ink/90 px-3 py-1.5 text-xs font-medium text-white">
                 Tank Solutions
@@ -75,7 +75,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">What We Offer</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <div className="border border-neutral-200 bg-white p-7 dark:border-white/10 dark:bg-neutral-950">
@@ -113,13 +113,13 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Types of Diesel / Fuel Tanks</h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">Each configuration has its own page with the detail relevant to that type.</p>
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <a href="/services/tank-solutions/diesel-fuel-tanks/generator-diesel-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Generator Diesel Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src="/assets/images/tank-solutions/industrial_day_tank_beside_standby_generator.png" alt="Generator Diesel Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -133,7 +133,7 @@ export default function Page() {
           </a>
           <a href="/services/tank-solutions/diesel-fuel-tanks/underground-diesel-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Underground Diesel Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src="/assets/images/tank-solutions/forest_green_underground_diesel_tank.png" alt="Underground Diesel Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -147,7 +147,7 @@ export default function Page() {
           </a>
           <a href="/services/tank-solutions/diesel-fuel-tanks/aboveground-fuel-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Aboveground Fuel Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src="/assets/images/tank-solutions/modern_uae_diesel_storage_tank.png" alt="Aboveground Fuel Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -161,7 +161,7 @@ export default function Page() {
           </a>
           <a href="/services/tank-solutions/diesel-fuel-tanks/industrial-fuel-storage-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Industrial Fuel Storage Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src="/assets/images/tank-solutions/industrial_diesel_tank_and_transfer_pump_skid.png" alt="Industrial Fuel Storage Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -178,7 +178,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
             <div>
               <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Technical Snapshot</h2>
@@ -224,7 +224,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">From Duty Review to Delivery</h2>
           <ol className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             <li className="border-t border-neutral-200 pt-4 dark:border-white/10">
@@ -252,7 +252,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Reference Sizes</h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">Documented configurations we can reference as a starting point — confirmed per project, not a committed availability.</p>
 
@@ -267,7 +267,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Standards &amp; Compliance</h2>
           <dl className="mt-8 max-w-3xl divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
             <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.8fr] sm:gap-6">
@@ -296,7 +296,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Accessories &amp; Fittings</h2>
           <div className="mt-6 flex flex-wrap gap-2">
             <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Access / manway</span>
@@ -321,7 +321,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Frequently Asked Questions</h2>
           <div className="mt-8 max-w-3xl border-t border-neutral-200 dark:border-white/10">
             <details className="group border-b border-neutral-200 py-5 dark:border-white/10">

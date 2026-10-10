@@ -146,7 +146,7 @@ export default function ServiceDetail({
 
       {/* OVERVIEW */}
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:px-0 lg:py-24">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:px-8 xl:px-0 lg:py-24">
           <div>
             <Link
               href={div.href}
@@ -209,7 +209,7 @@ export default function ServiceDetail({
 
       {/* WHAT WE OFFER */}
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <SectionHeading>What We Offer</SectionHeading>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {offerings.map((o) => (
@@ -233,7 +233,7 @@ export default function ServiceDetail({
       {/* TYPES */}
       {types && types.length > 0 && (
         <section className="w-full bg-white dark:bg-neutral-950">
-          <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+          <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
             <SectionHeading>
               {types.some((t) => t.slug) ? `Types of ${title}` : "Construction Options"}
             </SectionHeading>
@@ -300,7 +300,7 @@ export default function ServiceDetail({
 
       {/* SPECS + APPLICATIONS */}
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.3fr_1fr] lg:gap-16 lg:px-0">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.3fr_1fr] lg:gap-16 lg:px-8 xl:px-0">
           <div>
             <SectionHeading>{specsTitle}</SectionHeading>
             <dl className="mt-8 divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
@@ -362,7 +362,7 @@ export default function ServiceDetail({
 
       {/* PROCESS */}
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <SectionHeading>{stepsTitle}</SectionHeading>
           <ol
             className={`mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 ${
@@ -391,7 +391,7 @@ export default function ServiceDetail({
 
       {/* FAQ */}
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <SectionHeading>Frequently Asked Questions</SectionHeading>
           <div className="mt-8 max-w-3xl border-t border-neutral-200 dark:border-white/10">
             {faqs.map((f) => (
@@ -417,7 +417,7 @@ export default function ServiceDetail({
 
       {/* RELATED */}
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <SectionHeading>More in {div.label}</SectionHeading>
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {related.map(([label, s]) => (

@@ -12,7 +12,7 @@ import CTASection from "@/components/home/CTASection";
 
 export const metadata = {
   title:
-    "Industrial Services & Chiller Installation in Saudi Arabia | Falcon Technologies",
+    "Industrial Services & Chiller Installation in Saudi Arabia",
   description:
     "Falcon Technologies provides tank inspection, industrial coating, survey and scanning, mechanical maintenance, and chiller installation and maintenance across Saudi Arabia, including Dammam.",
 };
@@ -46,8 +46,8 @@ const children = [
     href: "/services/industrial-services/industrial-coating",
   },
   {
-    label: "Survey & Scanning",
-    href: "/services/industrial-services/survey-scanning",
+    label: "Surveying & 3D Scanning",
+    href: "/services/survey-scanning",
   },
   {
     label: "Mechanical Maintenance",
@@ -164,16 +164,17 @@ export default function IndustrialServicesPage() {
         title="Industrial Services"
         description="Inspection, mechanical maintenance and chiller installation & maintenance delivered by a single accountable team."
         breadcrumb="Industrial Services"
-        image="/assets/images/home/hero-slide-1.png"
+        image="/assets/images/services/tank-inspection.png"
+        imageAlt="Industrial storage tank inspection by Falcon Technologies site team"
       />
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:px-0 lg:py-24">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:px-8 xl:px-0 lg:py-24">
           <div>
             <Wrench size={32} strokeWidth={1.3} className="text-brand" />
-            <h1 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
+            <h2 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
               Industrial Site Support, Plus Chiller Installation & Maintenance
-            </h1>
+            </h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">
               Beyond tanks, Falcon supports the wider industrial site —
               inspection, coating, survey and scanning, mechanical maintenance
@@ -239,7 +240,7 @@ export default function IndustrialServicesPage() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             Industries That Rely on Falcon Support
           </h2>
@@ -257,7 +258,7 @@ export default function IndustrialServicesPage() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             How We Deliver Service
           </h2>
@@ -283,7 +284,7 @@ export default function IndustrialServicesPage() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             Frequently Asked Questions
           </h2>
@@ -303,8 +304,8 @@ export default function IndustrialServicesPage() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-0">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.1em] text-neutral-400 dark:text-white/40">
+        <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-8 xl:px-0">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-neutral-400 dark:text-white/40">
             Referenced Standards
           </h2>
           <div className="mt-4 flex flex-wrap gap-2">
@@ -321,7 +322,7 @@ export default function IndustrialServicesPage() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             Related Services
           </h2>

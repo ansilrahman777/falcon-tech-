@@ -12,7 +12,7 @@ const projectsData = [
     industry: "Manufacturing",
     scope: "Design, fabrication and installation of vertical FRP potable water storage tanks.",
     completion: "2025",
-    image: "/assets/images/home/showcase-1.png",
+    image: "/assets/images/projects/project-frp-water-storage-tanks.png",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projectsData = [
     industry: "Oil & Gas",
     scope: "Underground diesel tank supply with associated fittings and installation support.",
     completion: "2024",
-    image: "/assets/images/home/showcase-2.png",
+    image: "/assets/images/projects/project-underground-diesel-storage.png",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const projectsData = [
     industry: "Petrochemical & Chemical",
     scope: "FRP chemical-resistant lining and corrosion protection for process storage tanks.",
     completion: "2024",
-    image: "/assets/images/home/showcase-3.png",
+    image: "/assets/images/projects/project-chemical-resistant-tank-lining.png",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const projectsData = [
     industry: "Manufacturing",
     scope: "Insulation system for steel process tanks to reduce heat loss and temperature fluctuation.",
     completion: "2023",
-    image: "/assets/images/home/project-01.jpg",
+    image: "/assets/images/projects/project-storage-tank-thermal-insulation.png",
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ const projectsData = [
     industry: "Water & Wastewater",
     scope: "Structural reinforcement, crack rectification and nozzle restoration on FRP storage tanks.",
     completion: "2023",
-    image: "/assets/images/home/showcase-1.png",
+    image: "/assets/images/projects/project-frp-tank-crack-restoration.png",
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const projectsData = [
     industry: "Petrochemical & Chemical",
     scope: "Supply and installation of HDPE chemical storage tanks with secondary containment.",
     completion: "2025",
-    image: "/assets/images/home/showcase-2.png",
+    image: "/assets/images/projects/project-polyethylene-chemical-tank-install.png",
   },
   {
     id: 7,
@@ -78,7 +78,7 @@ const projectsData = [
     industry: "Commercial & Industrial Buildings",
     scope: "New chiller installation, mechanical piping support, commissioning and start-up assistance.",
     completion: "2025",
-    image: "/assets/images/home/showcase-3.png",
+    image: "/assets/images/projects/project-chiller-installation-commissioning.png",
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ const projectsData = [
     industry: "Manufacturing",
     scope: "Scheduled tank inspection, mechanical maintenance and industrial coating support.",
     completion: "Ongoing",
-    image: "/assets/images/home/project-01.jpg",
+    image: "/assets/images/projects/project-preventive-maintenance-program.png",
   },
 ];
 

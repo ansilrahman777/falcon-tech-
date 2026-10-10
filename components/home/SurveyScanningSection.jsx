@@ -67,7 +67,7 @@ const capabilities = [
     image: "/assets/images/services/bim-modelling.jpg",
   },
   {
-    slug: "reverse-engineering-scanning",
+    slug: "reverse-engineering",
     icon: Cog,
     label: "Reverse Engineering",
     line: "Obsolete or undocumented components scanned and rebuilt as editable CAD — the fastest route back to a manufacturable replacement.",
@@ -107,7 +107,7 @@ export default function SurveyScanningSection() {
         className="pointer-events-none absolute -left-32 bottom-0 h-96 w-96 rounded-full bg-brand/20 blur-[140px]"
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
         {/* Section Heading */}
         <div className="max-w-2xl">
           <motion.div
@@ -143,6 +143,14 @@ export default function SurveyScanningSection() {
             buildings and components, then deliver as-built drawings, BIM models
             or CAD solids from the same captured reality.
           </motion.p>
+
+          <Link
+            href="/services/survey-scanning"
+            className="mt-6 inline-flex items-center gap-1.5 border-b border-brand pb-0.5 text-sm font-semibold text-white transition-colors hover:border-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          >
+            Explore surveying services
+            <ArrowUpRight size={15} aria-hidden="true" />
+          </Link>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-14">
@@ -212,7 +220,11 @@ export default function SurveyScanningSection() {
               }}
               className="overflow-hidden rounded-sm border border-white/12 bg-white/3"
             >
-              <div className="relative aspect-16/10 bg-white/5">
+              <Link
+                href={`/services/survey-scanning/${current.slug}`}
+                aria-label={`${current.label} — view service details`}
+                className="group relative block aspect-16/10 bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              >
                 <Image
                   src={current.image}
                   alt={`${current.label} — Falcon Technologies Saudi Arabia`}
@@ -222,7 +234,10 @@ export default function SurveyScanningSection() {
                 />
 
                 {/* <div className="absolute inset-0 bg-linear-to-t from-ink via-ink/25 to-transparent" /> */}
-              </div>
+                <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-ink transition-colors group-hover:bg-brand group-hover:text-white">
+                  <ArrowUpRight size={18} aria-hidden="true" />
+                </span>
+              </Link>
 
               {/* <div className="p-7 sm:p-8">
                 <p className="text-sm leading-relaxed text-white/60">

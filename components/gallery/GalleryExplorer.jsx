@@ -12,8 +12,6 @@ import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
   To add a photo: add an object to GALLERY with a `category` from CATEGORIES.
 */
 
-const PLACEHOLDER = "/assets/images/home/hero-slide-1.png";
-
 const CATEGORIES = [
   "FRP Tanks",
   "Polyethylene Tanks",
@@ -28,11 +26,35 @@ const CATEGORIES = [
   "Manufacturing",
 ];
 
-// Dummy items (2 per category) — replace image + title with real project photos.
-const GALLERY = CATEGORIES.flatMap((category, i) => [
-  { id: `${i}-a`, category, title: `${category}`, image: PLACEHOLDER },
-  { id: `${i}-b`, category, title: `${category} — on site`, image: PLACEHOLDER },
-]);
+const slug = (s) =>
+  s
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+// Two items per category. Each has its own descriptive file name under
+// /public/assets/images/gallery/ — drop a real .png in at that exact path
+// and it shows up automatically. Alt text is descriptive for SEO/a11y.
+const GALLERY = CATEGORIES.flatMap((category) => {
+  const s = slug(category);
+  return [
+    {
+      id: `${s}-1`,
+      category,
+      title: category,
+      image: `/assets/images/gallery/${s}-1.png`,
+      alt: `${category} by Falcon Technologies — Saudi Arabia`,
+    },
+    {
+      id: `${s}-2`,
+      category,
+      title: `${category} — on site`,
+      image: `/assets/images/gallery/${s}-2.png`,
+      alt: `${category} on site by Falcon Technologies — Saudi Arabia`,
+    },
+  ];
+});
 
 export default function GalleryExplorer() {
   const [active, setActive] = useState("All");
@@ -40,22 +62,18 @@ export default function GalleryExplorer() {
 
   const filtered = useMemo(
     () =>
-      active === "All"
-        ? GALLERY
-        : GALLERY.filter((g) => g.category === active),
+      active === "All" ? GALLERY : GALLERY.filter((g) => g.category === active),
     [active],
   );
 
   const openAt = (i) => setLightbox(i);
   const close = () => setLightbox(null);
-  const prev = () =>
-    setLightbox((i) => (i > 0 ? i - 1 : filtered.length - 1));
-  const next = () =>
-    setLightbox((i) => (i < filtered.length - 1 ? i + 1 : 0));
+  const prev = () => setLightbox((i) => (i > 0 ? i - 1 : filtered.length - 1));
+  const next = () => setLightbox((i) => (i < filtered.length - 1 ? i + 1 : 0));
 
   return (
     <section className="w-full bg-white dark:bg-neutral-950">
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
         {/* Category filter bar */}
         <div className="flex flex-wrap gap-2">
           {["All", ...CATEGORIES].map((cat) => (
@@ -94,7 +112,7 @@ export default function GalleryExplorer() {
               >
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={item.alt}
                   fill
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -167,7 +185,7 @@ export default function GalleryExplorer() {
               <div className="relative aspect-4/3 w-full overflow-hidden rounded-sm bg-neutral-900">
                 <Image
                   src={filtered[lightbox].image}
-                  alt={filtered[lightbox].title}
+                  alt={filtered[lightbox].alt}
                   fill
                   sizes="90vw"
                   className="object-contain"

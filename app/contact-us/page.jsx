@@ -19,7 +19,7 @@ export default function ContactUs() {
         image="/assets/images/home/hero-slide-2.png"
       />
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1fr_1.4fr] lg:px-0 lg:py-24">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1fr_1.4fr] lg:px-8 xl:px-0 lg:py-24">
           <div>
             <div className="inline-flex h-7.5 items-center rounded-full border border-neutral-300 px-4.25 dark:border-white/15">
               <span className="text-[12px] font-medium uppercase tracking-[-0.01em] text-neutral-900 dark:text-white">

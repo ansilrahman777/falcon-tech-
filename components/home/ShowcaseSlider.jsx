@@ -72,6 +72,7 @@ export default function ShowcaseSlider() {
               alt={slide.heading.join(" ")}
               fill
               priority={index === 0}
+              sizes="100vw"
               className="object-cover"
             />
             {/* fade the image into the page background on the left so text
@@ -225,7 +226,13 @@ export default function ShowcaseSlider() {
                 i === index ? "border-red-600" : "border-transparent"
               }`}
             >
-              <Image src={s.thumb} alt="" fill className="object-cover" />
+              <Image
+                src={s.thumb}
+                alt={`${s.heading.join(" ")} thumbnail`}
+                fill
+                sizes="96px"
+                className="object-cover"
+              />
             </button>
           ))}
         </div>

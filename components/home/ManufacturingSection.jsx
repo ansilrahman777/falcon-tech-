@@ -26,7 +26,7 @@ const capabilities = [
 export default function ManufacturingSection() {
   return (
     <section className="w-full overflow-hidden bg-neutral-50 dark:bg-neutral-900">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-5 py-17.5 sm:px-8 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-0 lg:py-23">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-5 py-17.5 sm:px-8 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-8 xl:px-0 lg:py-23">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,6 +38,7 @@ export default function ManufacturingSection() {
             src="/assets/images/home/built.webp"
             alt="Falcon Technologies manufacturing facility"
             fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-ink/90 px-6 py-4 backdrop-blur-sm">

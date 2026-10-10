@@ -14,7 +14,7 @@ const standards = [
 export default function StandardsBar() {
   return (
     <section className="w-full overflow-hidden bg-neutral-900 py-12 sm:py-14">
-      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-0">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-8 xl:px-0">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

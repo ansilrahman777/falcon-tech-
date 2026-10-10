@@ -51,7 +51,7 @@ export default function StatsCounter() {
       <div className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full bg-brand/10 blur-[100px]" />
       <div className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-brand/10 blur-[100px]" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-2 gap-10 px-6 sm:px-8 lg:grid-cols-4 lg:px-0">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-2 gap-10 px-6 sm:px-8 lg:grid-cols-4 lg:px-8 xl:px-0">
         {stats.map((stat, i) => {
           const Icon = stat.icon;
           return (

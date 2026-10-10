@@ -20,7 +20,7 @@ export default function ProjectsGallery() {
 
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
         {/* Filter tabs */}
         <div className="flex flex-wrap gap-2">
           {projectCategories.map((cat) => (
@@ -61,6 +61,7 @@ export default function ProjectsGallery() {
                       src={p.image}
                       alt={p.title}
                       fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-white backdrop-blur">
@@ -126,6 +127,7 @@ export default function ProjectsGallery() {
                   src={selected.image}
                   alt={selected.title}
                   fill
+                  sizes="(min-width: 1024px) 60vw, 100vw"
                   className="object-cover"
                 />
               </div>

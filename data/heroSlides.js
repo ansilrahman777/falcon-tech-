@@ -6,7 +6,7 @@ const heroSlides = [
     description:
       "FRP tanks manufactured for water, chemical and industrial storage, combining strong construction with excellent corrosion resistance and dependable long-term performance.",
     ctaLabel: "Shop FRP Tanks",
-    ctaHref: "/products/frp-tanks",
+    ctaHref: "/services/tank-solutions/frp-grp-tanks",
     image: "/assets/images/home/hero-slide-4.webp",
   },
 
@@ -17,7 +17,7 @@ const heroSlides = [
     description:
       "Durable underground storage tanks manufactured for secure, space-efficient installation and reliable performance in demanding site conditions.",
     ctaLabel: "Shop Underground Tanks",
-    ctaHref: "/products/underground-tanks",
+    ctaHref: "/services/tank-solutions/underground-tanks",
     image: "/assets/images/home/hero-slide-7.webp",
   },
 
@@ -28,7 +28,7 @@ const heroSlides = [
     description:
       "Fire-retardant tanks manufactured for applications where enhanced fire resistance, structural durability and dependable storage performance are essential.",
     ctaLabel: "Shop Fire Retardant Tanks",
-    ctaHref: "/products/fire-retardant-tanks",
+    ctaHref: "/services/tank-solutions/frp-grp-tanks",
     image: "/assets/images/home/hero-slide-5.webp",
   },
   {
@@ -38,7 +38,7 @@ const heroSlides = [
     description:
       "Chemical storage tanks manufactured with durable, corrosion-resistant materials to safely handle demanding chemical storage applications and provide reliable long-term performance.",
     ctaLabel: "Shop Chemical Tanks",
-    ctaHref: "/products/chemical-tanks",
+    ctaHref: "/services/tank-solutions/chemical-tanks",
     image: "/assets/images/home/hero-slide-6.webp",
   },
 ];

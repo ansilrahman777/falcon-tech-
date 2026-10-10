@@ -12,7 +12,7 @@ import CTASection from "@/components/home/CTASection";
 
 export const metadata = {
   title:
-    "Thermal & Aerogel Insulation Services in Saudi Arabia | Falcon Technologies",
+    "Thermal & Aerogel Insulation Services in Saudi Arabia",
   description:
     "Falcon Technologies applies thermal and aerogel insulation to tanks, pipes, buildings and equipment rooms across Saudi Arabia, cutting heat loss and solar gain in demanding industrial environments.",
 };
@@ -159,16 +159,17 @@ export default function ThermalInsulationPage() {
         title="Thermal Insulation"
         description="Insulation systems, including aerogel, that reduce heat loss, solar gain and temperature fluctuation."
         breadcrumb="Thermal Insulation"
-        image="/assets/images/home/hero-slide-1.png"
+        image="/assets/images/services/industrial-insulation.png"
+        imageAlt="Industrial thermal insulation applied to tanks and pipework in Saudi Arabia"
       />
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:px-0 lg:py-24">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:px-8 xl:px-0 lg:py-24">
           <div>
             <Flame size={32} strokeWidth={1.3} className="text-brand" />
-            <h1 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
+            <h2 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
               Thermal & Aerogel Insulation for Tanks, Pipes and Buildings
-            </h1>
+            </h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">
               Thermal insulation is a core Falcon capability in its own right —
               not just a tank accessory. We cover storage tanks, pipes and
@@ -236,7 +237,7 @@ export default function ThermalInsulationPage() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             Industries That Rely on Falcon Insulation
           </h2>
@@ -254,7 +255,7 @@ export default function ThermalInsulationPage() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             How We Apply Insulation
           </h2>
@@ -280,7 +281,7 @@ export default function ThermalInsulationPage() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             Frequently Asked Questions
           </h2>
@@ -300,7 +301,7 @@ export default function ThermalInsulationPage() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-8 xl:px-0">
           <h2 className="text-sm font-semibold uppercase tracking-widest text-neutral-400 dark:text-white/40">
             Referenced Standards
           </h2>
@@ -318,7 +319,7 @@ export default function ThermalInsulationPage() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0">
           <h2 className="max-w-md text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
             Related Services
           </h2>

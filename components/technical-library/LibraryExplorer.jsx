@@ -29,7 +29,7 @@ export default function LibraryExplorer({ initialCategory = "all" }) {
       id="library"
       className="w-full overflow-hidden bg-neutral-50 dark:bg-neutral-950"
     >
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.15em] text-brand">

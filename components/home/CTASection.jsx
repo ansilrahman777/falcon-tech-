@@ -10,9 +10,10 @@ export default function CTASection() {
     <section className="relative w-full overflow-hidden bg-neutral-900">
       <div className="absolute inset-0">
         <Image
-          src="/assets/images/avatar.png"
-          alt=""
+          src="/assets/images/home/cta-background.png"
+          alt="Falcon Technologies industrial tank and service facility"
           fill
+          sizes="100vw"
           className="object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-linear-to-r from-neutral-900 via-neutral-900/90 to-neutral-900/60" />
@@ -20,7 +21,7 @@ export default function CTASection() {
 
       <div className="pointer-events-none absolute -right-20 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-brand/15 blur-[120px]" />
 
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-start gap-8 px-5 py-16 sm:px-8 sm:py-20 lg:flex-row lg:items-center lg:justify-between lg:px-0 lg:py-24">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-start gap-8 px-5 py-16 sm:px-8 sm:py-20 lg:flex-row lg:items-center lg:justify-between lg:px-8 xl:px-0 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

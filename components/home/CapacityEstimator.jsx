@@ -59,7 +59,7 @@ export default function CapacityEstimator() {
 
   return (
     <section className="w-full overflow-hidden bg-ink">
-      <div className="mx-auto w-full max-w-7xl px-5 py-17.5 sm:px-8 sm:py-20 lg:px-0 lg:py-23">
+      <div className="mx-auto w-full max-w-7xl px-5 py-17.5 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-23">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div>
             <h2 className="max-w-md text-[28px] font-normal leading-[1.15] tracking-[-0.03em] text-white sm:text-[34px]">

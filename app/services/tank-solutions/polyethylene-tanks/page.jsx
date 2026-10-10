@@ -23,11 +23,11 @@ export default function Page() {
         title="Polyethylene Tanks"
         description="Rotomolded LLDPE and HDPE tanks for water and chemical storage — vertical, horizontal and underground."
         breadcrumb="Polyethylene Tanks"
-        image="/assets/images/home/hero-slide-1.png"
+        image="/assets/images/tank-solutions/heavy-duty_polyethylene_tanks_in_gulf_facility.png"
       />
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
             <div>
               <a
@@ -37,9 +37,9 @@ export default function Page() {
                 <ArrowLeft size={13} />
                 Tank Solutions
               </a>
-              <h1 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
+              <h2 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
                 LLDPE / HDPE Polyethylene Storage Tanks in Saudi Arabia
-              </h1>
+              </h2>
               <div className="mt-5 max-w-xl space-y-4">
               <p className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">
                 Rotomolded polyethylene tanks are seamless, corrosion-free and practical for small to medium storage volumes. Falcon supplies LLDPE and HDPE tanks where they are the right fit, and recommends FRP or steel when capacity, temperature or chemical exposure calls for it.
@@ -64,7 +64,7 @@ export default function Page() {
               </div>
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-sm border border-neutral-200 bg-neutral-100 dark:border-white/10 dark:bg-neutral-900">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Polyethylene Tanks by Falcon Technologies in Saudi Arabia" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+              <Image src="/assets/images/tank-solutions/four_polyethylene_tank_configurations.png" alt="Polyethylene Tanks by Falcon Technologies in Saudi Arabia" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
               <span className="absolute bottom-4 left-4 rounded-sm bg-ink/90 px-3 py-1.5 text-xs font-medium text-white">
                 Tank Solutions
@@ -75,7 +75,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">What We Offer</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <div className="border border-neutral-200 bg-white p-7 dark:border-white/10 dark:bg-neutral-950">
@@ -113,13 +113,13 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Types of Polyethylene Tanks</h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">Each configuration has its own page with the detail relevant to that type.</p>
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <a href="/services/tank-solutions/polyethylene-tanks/vertical-pe-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Vertical PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src="/assets/images/tank-solutions/heavy-duty_polyethylene_tanks_in_gulf_facility.png" alt="Vertical PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -133,7 +133,7 @@ export default function Page() {
           </a>
           <a href="/services/tank-solutions/polyethylene-tanks/horizontal-pe-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Horizontal PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src="/assets/images/tank-solutions/industrial_horizontal_polyethylene_tank_on_engineered_cradle.png" alt="Horizontal PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -147,7 +147,7 @@ export default function Page() {
           </a>
           <a href="/services/tank-solutions/polyethylene-tanks/underground-pe-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Underground PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src="/assets/images/tank-solutions/Industrial_Underground_Tank_Installation.png" alt="Underground PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -161,7 +161,7 @@ export default function Page() {
           </a>
           <a href="/services/tank-solutions/polyethylene-tanks/multi-layer-pe-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Multi-Layer Rotomolded PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src="/assets/images/tank-solutions/premium_rotomolded_polyethylene_storage_tank.png" alt="Multi-Layer Rotomolded PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -178,7 +178,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
             <div>
               <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Technical Snapshot</h2>
@@ -225,7 +225,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">From Enquiry to Supply</h2>
           <ol className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             <li className="border-t border-neutral-200 pt-4 dark:border-white/10">
@@ -253,7 +253,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Reference Sizes</h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-500 dark:text-white/55">Documented configurations we can reference as a starting point — confirmed per project, not a committed availability.</p>
 
@@ -272,7 +272,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Standards &amp; Compliance</h2>
           <dl className="mt-8 max-w-3xl divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-white/10 dark:border-white/10">
             <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[1fr_1.8fr] sm:gap-6">
@@ -289,7 +289,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Accessories &amp; Fittings</h2>
           <div className="mt-6 flex flex-wrap gap-2">
             <span className="border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-white/15 dark:text-white/60">Access / manway</span>
@@ -314,7 +314,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Frequently Asked Questions</h2>
           <div className="mt-8 max-w-3xl border-t border-neutral-200 dark:border-white/10">
             <details className="group border-b border-neutral-200 py-5 dark:border-white/10">

@@ -26,7 +26,7 @@ const pathways = [
 export default function AudiencePathways() {
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-5 py-16 sm:px-8 sm:py-20 md:grid-cols-2 lg:px-0 lg:py-24">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-5 py-16 sm:px-8 sm:py-20 md:grid-cols-2 lg:px-8 xl:px-0 lg:py-24">
         {pathways.map((p, i) => {
           const Icon = p.icon;
           return (

@@ -46,7 +46,7 @@ const capabilities = [
 export default function CapabilitiesOverview() {
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
         <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 12 }}

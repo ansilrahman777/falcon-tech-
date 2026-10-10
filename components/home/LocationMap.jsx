@@ -9,7 +9,7 @@ const MAP_EMBED_URL =
 export default function LocationMap() {
   return (
     <section className="relative w-full overflow-hidden bg-neutral-100 dark:bg-neutral-900">
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
         {/* ==== SECTION HEADER ==== */}
         <div className="mb-10 flex flex-col gap-6 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
@@ -194,7 +194,7 @@ export default function LocationMap() {
 
             {/* ==== CTA ==== */}
             <a
-              href="/contact"
+              href="/contact-us"
               className="group mt-10 inline-flex w-fit items-center gap-2 border-b border-neutral-900 pb-1.5 text-sm font-medium text-neutral-900 transition-colors duration-300 hover:border-brand hover:text-brand dark:border-white dark:text-white"
             >
               Contact Our Team

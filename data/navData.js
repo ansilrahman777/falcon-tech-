@@ -121,10 +121,6 @@ const navData = [
             href: "/services/industrial-services/industrial-coating",
           },
           {
-            label: "Survey & Scanning",
-            href: "/services/industrial-services/survey-scanning",
-          },
-          {
             label: "Mechanical Maintenance",
             href: "/services/industrial-services/mechanical-maintenance",
           },
@@ -137,6 +133,49 @@ const navData = [
             href: "/services/industrial-services/chiller-installation-maintenance",
           },
         ],
+      },
+
+      {
+        label: "Surveying & 3D Scanning",
+        href: "/services/survey-scanning",
+        children: [
+          { label: "3D Laser Scanning", href: "/services/survey-scanning/3d-laser-scanning" },
+          { label: "As-Built Survey", href: "/services/survey-scanning/as-built-survey" },
+          { label: "Scan to BIM", href: "/services/survey-scanning/scan-to-bim" },
+          { label: "BIM Modelling", href: "/services/survey-scanning/bim-modelling" },
+          { label: "Reverse Engineering", href: "/services/survey-scanning/reverse-engineering" },
+        ],
+      },
+    ],
+  },
+
+  {
+    label: "Surveying",
+    href: "/services/survey-scanning",
+    submenu: [
+      {
+        label: "Surveying & 3D Scanning",
+        href: "/services/survey-scanning",
+      },
+      {
+        label: "3D Laser Scanning",
+        href: "/services/survey-scanning/3d-laser-scanning",
+      },
+      {
+        label: "As-Built Survey",
+        href: "/services/survey-scanning/as-built-survey",
+      },
+      {
+        label: "Scan to BIM",
+        href: "/services/survey-scanning/scan-to-bim",
+      },
+      {
+        label: "BIM Modelling",
+        href: "/services/survey-scanning/bim-modelling",
+      },
+      {
+        label: "Reverse Engineering",
+        href: "/services/survey-scanning/reverse-engineering",
       },
     ],
   },

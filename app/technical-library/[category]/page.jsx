@@ -36,7 +36,7 @@ export default async function TechnicalLibraryCategory({ params }) {
         image="/assets/images/home/hero-slide-1.png"
       />
 
-      <div className="mx-auto w-full max-w-7xl px-5 pt-10 sm:px-8 lg:px-0">
+      <div className="mx-auto w-full max-w-7xl px-5 pt-10 sm:px-8 lg:px-8 xl:px-0">
         <Link
           href="/technical-library"
           className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-500 transition-colors hover:text-brand dark:text-white/50"

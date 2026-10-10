@@ -23,11 +23,12 @@ export default function Page() {
         title="Utility Water Tank"
         description="Storage for non-potable utility and general-purpose water use."
         breadcrumb="Utility Water Tank"
-        image="/assets/images/home/hero-slide-1.png"
+        image="/assets/images/tank-solutions/modern_uae_utility_water_tank.png"
+        imageAlt="Utility Water Tank by Falcon Technologies in Saudi Arabia"
       />
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
             <div>
               <a
@@ -37,9 +38,9 @@ export default function Page() {
                 <ArrowLeft size={13} />
                 Water Tanks
               </a>
-              <h1 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
+              <h2 className="mt-6 max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">
                 Utility Water Tank
-              </h1>
+              </h2>
               <div className="mt-5 max-w-xl space-y-4">
               <p className="text-sm leading-relaxed text-neutral-500 dark:text-white/55">
                 Storage for non-potable wash, service or general utility water.
@@ -64,7 +65,7 @@ export default function Page() {
               </div>
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-sm border border-neutral-200 bg-neutral-100 dark:border-white/10 dark:bg-neutral-900">
-              <Image src="/assets/images/home/hero-slide-1.png" alt="Utility Water Tank by Falcon Technologies in Saudi Arabia" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+              <Image src="/assets/images/tank-solutions/modern_uae_utility_water_tank.png" alt="Utility Water Tank by Falcon Technologies in Saudi Arabia" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
               <span className="absolute bottom-4 left-4 rounded-sm bg-ink/90 px-3 py-1.5 text-xs font-medium text-white">
                 Water Tanks
@@ -75,7 +76,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
             <div>
               <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Specification</h2>
@@ -115,7 +116,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-white dark:bg-neutral-950">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Frequently Asked Questions</h2>
           <div className="mt-8 max-w-3xl border-t border-neutral-200 dark:border-white/10">
             <details className="group border-b border-neutral-200 py-5 dark:border-white/10">
@@ -137,7 +138,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-neutral-50 dark:bg-neutral-900">
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
           <h2 className="max-w-xl text-[26px] font-normal leading-[1.2] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[30px]">Other Water Tanks Types</h2>
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
             <a href="/services/tank-solutions/water-tanks/potable-water-tank" className="group flex items-center justify-between border border-neutral-200 bg-white p-6 transition-colors hover:border-brand dark:border-white/10 dark:bg-neutral-950">

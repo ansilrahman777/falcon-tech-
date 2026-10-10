@@ -41,7 +41,7 @@ const posts = [
 export default function BlogSection() {
   return (
     <section className="relative w-full overflow-hidden bg-white dark:bg-neutral-950">
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-0 lg:py-24">
+      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-24">
         {/* Header */}
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
@@ -122,6 +122,7 @@ export default function BlogSection() {
                     src={post.image}
                     alt={post.title}
                     fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
 

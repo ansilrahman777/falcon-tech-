@@ -33,7 +33,7 @@ export default function Testimonials() {
       onMouseLeave={() => setPaused(false)}
       className="relative w-full overflow-hidden bg-neutral-50 py-16 dark:bg-neutral-950 sm:py-20 lg:py-24"
     >
-      <div className="mx-auto w-full max-w-3xl px-5 text-center sm:px-8 lg:px-0">
+      <div className="mx-auto w-full max-w-3xl px-5 text-center sm:px-8 lg:px-8 xl:px-0">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,13 @@ export default function Testimonials() {
 
               <div className="mt-8 flex items-center justify-center gap-3">
                 <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                  <Image src={t.avatar} alt={t.name} fill className="object-cover" />
+                  <Image
+                    src={t.avatar}
+                    alt={`${t.name}${t.role ? `, ${t.role}` : ""}`}
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="text-left">
                   <p className="text-sm font-semibold text-neutral-900 dark:text-white">

@@ -20,24 +20,24 @@ const services = [
     href: "/services/thermal-insulation",
   },
   {
-    name: "Tank Restoration & Rehabilitation",
+    name: "Tank Restoration & Lining",
     href: "/services/tank-restoration-lining",
-  },
-  {
-    name: "Tank Lining",
-    href: "/services/tank-lining",
-  },
-  {
-    name: "Chiller Installation & Maintenance",
-    href: "/services/chiller-installation-maintenance",
   },
   {
     name: "Industrial Services",
     href: "/services/industrial-services",
   },
   {
-    name: "Inspection & Quality Assurance",
-    href: "/quality-standards",
+    name: "Chiller Installation & Maintenance",
+    href: "/services/industrial-services/chiller-installation-maintenance",
+  },
+  {
+    name: "Surveying & 3D Scanning",
+    href: "/services/survey-scanning",
+  },
+  {
+    name: "Tank Inspection",
+    href: "/services/industrial-services/tank-inspection",
   },
 ];
 
@@ -47,8 +47,8 @@ const quickLinks = [
     href: "/about-us",
   },
   {
-    name: "Engineering Capabilities",
-    href: "/engineering",
+    name: "Our Services",
+    href: "/services",
   },
   {
     name: "Our Projects",
@@ -100,7 +100,7 @@ export default function Footer() {
           MAIN
       ====================================================== */}
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-0">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-8 xl:px-0">
         <div
           className="
             grid

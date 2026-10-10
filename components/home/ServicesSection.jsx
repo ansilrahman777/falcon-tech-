@@ -286,7 +286,7 @@ export default function ServicesSection() {
 
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
-      <div className="mx-auto w-full max-w-7xl px-5 py-17.5 sm:px-8 sm:py-20 lg:px-0 lg:py-23">
+      <div className="mx-auto w-full max-w-7xl px-5 py-17.5 sm:px-8 sm:py-20 lg:px-8 xl:px-0 lg:py-23">
         <h2 className="max-w-lg text-[28px] font-normal leading-[1.15] tracking-[-0.03em] text-neutral-900 dark:text-white sm:text-[34px]">
           Our Tank Solutions
         </h2>
@@ -354,6 +354,7 @@ export default function ServicesSection() {
                           alt={child.alt}
                           fill
                           draggable={false}
+                          sizes="(min-width: 1024px) 420px, (min-width: 640px) 50vw, 100vw"
                           className="pointer-events-none object-cover"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
@@ -376,6 +377,7 @@ export default function ServicesSection() {
                       src={division.single.image}
                       alt={division.single.alt}
                       fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
                       className="object-cover"
                     />
                   </div>

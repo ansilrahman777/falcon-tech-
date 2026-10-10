@@ -48,7 +48,7 @@ const itemVariants = {
 export default function WhyChooseUs() {
   return (
     <section className="relative w-full overflow-hidden bg-neutral-50 dark:bg-neutral-950">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2 lg:items-center lg:px-0 lg:py-24">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2 lg:items-center lg:px-8 xl:px-0 lg:py-24">
         {/* Left: image */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -61,6 +61,7 @@ export default function WhyChooseUs() {
             src="/assets/images/home/falcon-tech-ksa-about.webp"
             alt="Industrial tank fabrication in progress"
             fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />

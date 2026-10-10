@@ -62,7 +62,7 @@ const categories = [
 export default function ServiceCategories() {
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
-      <div className="mx-auto w-full max-w-7xl divide-y divide-neutral-200 px-5 dark:divide-white/10 sm:px-8 lg:px-0">
+      <div className="mx-auto w-full max-w-7xl divide-y divide-neutral-200 px-5 dark:divide-white/10 sm:px-8 lg:px-8 xl:px-0">
         {categories.map((cat, i) => {
           const Icon = cat.icon;
           const reversed = i % 2 === 1;

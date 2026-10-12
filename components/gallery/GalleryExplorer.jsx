@@ -16,14 +16,14 @@ const CATEGORIES = [
   "FRP Tanks",
   "Polyethylene Tanks",
   "Underground Tanks",
-  "Chemical Tanks",
-  "Tank Restoration",
-  "Tank Lining",
-  "Thermal Insulation",
-  "Industrial Services",
-  "Chiller Installation & Maintenance",
-  "Installation",
-  "Manufacturing",
+  // "Chemical Tanks",
+  // "Tank Restoration",
+  // "Tank Lining",
+  // "Thermal Insulation",
+  // "Industrial Services",
+  // "Chiller Installation & Maintenance",
+  // "Installation",
+  // "Manufacturing",
 ];
 
 const slug = (s) =>

@@ -133,7 +133,7 @@ export default function Header() {
             ? lightSurface
               ? "bg-white/90 backdrop-blur-md border-b border-black/10"
               : "bg-black/80 backdrop-blur-md border-b border-white/10"
-            : "bg-linear-to-b from-black/80 via-black/55 via-70% to-transparent"
+            : "bg-linear-to-b from-black/70 via-black/50 via-30% to-black/30"
         }`}
       >
         {/* Top row: lang | logo | theme toggle */}

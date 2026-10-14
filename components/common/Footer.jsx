@@ -126,10 +126,10 @@ export default function Footer() {
               <Image
                 src="/assets/logos/falcon-tech-ksa-white-logo.png"
                 alt="Falcon Technologies KSA"
-                width={1980}
-                height={417}
-                priority
-                className="h-auto w-full object-contain object-left transition-opacity duration-300"
+                // displayed at max-w-sm (384px wide → 67px tall)
+                width={384}
+                height={67}
+                className="h-auto w-full max-w-xs md:max-w-sm object-contain object-left transition-opacity duration-300"
               />
             </Link>
 

@@ -186,9 +186,12 @@ export default function Header() {
             <Image
               src={logoSrc}
               alt="Falcon Technologies KSA"
-              width={2400}
-              height={417}
-              priority
+              // Logo is 2400×417. Intrinsic size just above the largest display
+              // size (h-20 = 80px tall) so Next serves a ~640/1080px file, and
+              // so CSS changes both width and height (no aspect-ratio warning).
+              width={480}
+              height={83}
+              loading="eager"
               className="h-12 md:h-20 w-auto object-contain transition-opacity duration-300"
             />
           </Link>
@@ -324,8 +327,9 @@ export default function Header() {
               <Image
                 src={resolvedTheme === "light" ? LOGO_BLACK : LOGO_WHITE}
                 alt="Falcon Technologies KSA"
-                width={2400}
-                height={417}
+                // displayed at h-7 (28px tall); same approach as the header logo
+                width={168}
+                height={29}
                 className="h-7 w-auto object-contain"
               />
               <div className="flex items-center gap-3">

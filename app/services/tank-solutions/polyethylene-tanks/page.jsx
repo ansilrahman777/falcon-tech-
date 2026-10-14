@@ -119,7 +119,7 @@ export default function Page() {
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <a href="/services/tank-solutions/polyethylene-tanks/vertical-pe-tank" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/tank-solutions/heavy-duty_polyethylene_tanks_in_gulf_facility.png" alt="Vertical PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image loading="eager" src="/assets/images/tank-solutions/heavy-duty_polyethylene_tanks_in_gulf_facility.png" alt="Vertical PE Tank" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">

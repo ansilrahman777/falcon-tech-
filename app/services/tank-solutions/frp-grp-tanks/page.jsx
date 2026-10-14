@@ -118,7 +118,7 @@ export default function Page() {
               </div>
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-sm border border-neutral-200 bg-neutral-100 dark:border-white/10 dark:bg-neutral-900">
-              <Image
+              <Image loading="eager"
                 src="/assets/images/tank-solutions/engineered_frp_tanks_in_saudi_facility.png"
                 alt="FRP / GRP Tanks by Falcon Technologies in Saudi Arabia"
                 fill

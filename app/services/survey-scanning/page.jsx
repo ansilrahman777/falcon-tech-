@@ -23,6 +23,10 @@ export const metadata = {
 /* Same layout as the Tank Solutions page; all styling is in this file. */
 /* ------------------------------------------------------------------ */
 
+// Hero photo. If a service tile below uses the same file, that tile loads
+// eagerly (otherwise Next flags the shared file as a lazy LCP image).
+const heroImage = "/assets/images/services/survey-scanning.png";
+
 // First item is the large feature tile.
 const ranges = [
   {
@@ -208,7 +212,7 @@ export default function SurveyScanningPage() {
         title="Surveying & 3D Scanning Services"
         description="Retrofit work fails on bad dimensions. We scan existing plants, buildings and components, then deliver as-built drawings, BIM models or CAD solids from the same captured reality."
         breadcrumb="Surveying & 3D Scanning"
-        image="/assets/images/services/survey-scanning.png"
+        image={heroImage}
         imageAlt="Surveying and 3D laser scanning of an existing industrial facility"
       />
 
@@ -234,7 +238,7 @@ export default function SurveyScanningPage() {
                 src={feature.image}
                 alt={feature.alt}
                 fill
-                priority
+                loading="eager"
                 sizes="(min-width: 1024px) 66vw, 100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -268,6 +272,7 @@ export default function SurveyScanningPage() {
                   src={r.image}
                   alt={r.alt}
                   fill
+                  loading={r.image === heroImage ? "eager" : "lazy"}
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

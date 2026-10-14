@@ -116,7 +116,7 @@ export default function Page() {
               </div>
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-sm border border-neutral-200 bg-neutral-100 dark:border-white/10 dark:bg-neutral-900">
-              <Image
+              <Image loading="eager"
                 src="/assets/images/tank-solutions/modern_uae_water_storage_facility.png"
                 alt="Water Tanks by Falcon Technologies in Saudi Arabia"
                 fill

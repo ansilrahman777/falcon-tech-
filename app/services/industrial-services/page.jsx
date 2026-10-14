@@ -23,6 +23,10 @@ export const metadata = {
 /* Same layout as the Tank Solutions page; all styling is in this file. */
 /* ------------------------------------------------------------------ */
 
+// Hero photo. If a service tile below uses the same file, that tile loads
+// eagerly (otherwise Next flags the shared file as a lazy LCP image).
+const heroImage = "/assets/images/services/tank-inspection.png";
+
 // First item is the large feature tile.
 const ranges = [
   {
@@ -223,7 +227,7 @@ export default function IndustrialServicesPage() {
         title="Industrial Services"
         description="Inspection, mechanical maintenance and chiller installation & maintenance delivered by a single accountable team."
         breadcrumb="Industrial Services"
-        image="/assets/images/services/tank-inspection.png"
+        image={heroImage}
         imageAlt="Industrial storage tank inspection by Falcon Technologies site team"
       />
 
@@ -249,7 +253,7 @@ export default function IndustrialServicesPage() {
                 src={feature.image}
                 alt={feature.alt}
                 fill
-                priority
+                loading="eager"
                 sizes="(min-width: 1024px) 66vw, 100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -283,6 +287,7 @@ export default function IndustrialServicesPage() {
                   src={r.image}
                   alt={r.alt}
                   fill
+                  loading={r.image === heroImage ? "eager" : "lazy"}
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

@@ -24,7 +24,7 @@ export default function PageHero({
         src={image}
         alt={imageAlt || `${title} — Falcon Technologies`}
         fill
-        priority
+        preload
         sizes="100vw"
         className="object-cover opacity-50"
       />

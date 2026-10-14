@@ -321,11 +321,11 @@ export default function ServicesPage() {
 
       <PageHero
         eyebrow="Our Services"
-        title="Reliable Industrial Solutions. Clear Engineering. Simple Customer Support"
+        title="Engineered Solutions From First Enquiry to Final Handover"
         description="Tanks, insulation, restoration and lining, site services and 3D scanning — every service backed by application engineering and documented quality."
         breadcrumb="Services"
-        image={`${TS}/industrial_steel_tank_systems_showcase.png`}
-        imageAlt="Industrial steel and FRP tank systems manufactured by Falcon Technologies"
+        image={`${TS}/engineered_atmospheric_storage_tank.png`}
+        imageAlt="Engineered atmospheric storage tank manufactured by Falcon Technologies"
       />
 
       {/* ============ ONE SECTION PER DIVISION ============ */}

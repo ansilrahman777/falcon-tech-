@@ -71,7 +71,6 @@ export default function ShowcaseSlider() {
               src={slide.image}
               alt={slide.heading.join(" ")}
               fill
-              priority={index === 0}
               sizes="100vw"
               className="object-cover"
             />

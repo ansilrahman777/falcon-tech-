@@ -65,7 +65,7 @@ export default function Page() {
               </div>
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-sm border border-neutral-200 bg-neutral-100 dark:border-white/10 dark:bg-neutral-900">
-              <Image src="/assets/images/services/chiller-installation.png" alt="Chiller Installation & Maintenance by Falcon Technologies in Saudi Arabia" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+              <Image loading="eager" src="/assets/images/services/chiller-installation.png" alt="Chiller Installation & Maintenance by Falcon Technologies in Saudi Arabia" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
               <span className="absolute bottom-4 left-4 rounded-sm bg-ink/90 px-3 py-1.5 text-xs font-medium text-white">
                 Industrial Services
@@ -120,7 +120,7 @@ export default function Page() {
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <a href="/services/industrial-services/chiller-installation-maintenance/new-installation" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/services/chiller-installation.png" alt="New Chiller Installation" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image loading="eager" src="/assets/images/services/chiller-installation.png" alt="New Chiller Installation" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -134,7 +134,7 @@ export default function Page() {
           </a>
           <a href="/services/industrial-services/chiller-installation-maintenance/preventive-maintenance" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/services/chiller-installation.png" alt="Preventive Maintenance" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image loading="eager" src="/assets/images/services/chiller-installation.png" alt="Preventive Maintenance" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">
@@ -148,7 +148,7 @@ export default function Page() {
           </a>
           <a href="/services/industrial-services/chiller-installation-maintenance/troubleshooting-repair" className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900">
             <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-              <Image src="/assets/images/services/chiller-installation.png" alt="Troubleshooting & Repair" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image loading="eager" src="/assets/images/services/chiller-installation.png" alt="Troubleshooting & Repair" fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/0 to-transparent" />
             </div>
             <div className="p-5">

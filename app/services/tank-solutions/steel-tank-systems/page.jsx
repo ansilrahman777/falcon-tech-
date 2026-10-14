@@ -116,7 +116,7 @@ export default function Page() {
               </div>
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-sm border border-neutral-200 bg-neutral-100 dark:border-white/10 dark:bg-neutral-900">
-              <Image
+              <Image loading="eager"
                 src="/assets/images/tank-solutions/industrial_steel_tank_systems_showcase.png"
                 alt="Steel Tank Systems by Falcon Technologies in Saudi Arabia"
                 fill
@@ -309,7 +309,7 @@ export default function Page() {
               className="group relative block overflow-hidden rounded-sm border border-neutral-200 bg-white dark:border-white/10 dark:bg-neutral-900"
             >
               <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-                <Image
+                <Image loading="eager"
                   src="/assets/images/tank-solutions/industrial_steel_tank_systems_showcase.png"
                   alt="Industrial Process Tank"
                   fill

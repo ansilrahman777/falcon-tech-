@@ -24,6 +24,10 @@ export const metadata = {
 /* Same layout as the Tank Solutions page; all styling is in this file. */
 /* ------------------------------------------------------------------ */
 
+// Hero photo. If a service tile below uses the same file, that tile loads
+// eagerly (otherwise Next flags the shared file as a lazy LCP image).
+const heroImage = "/assets/images/services/frp-tank-restoration.png";
+
 // First item is the large feature tile.
 const ranges = [
   {
@@ -249,7 +253,7 @@ export default function TankRestorationLiningPage() {
         title="Tank Restoration & Lining"
         description="Crack rectification, structural reinforcement and lining systems that extend the service life of existing assets."
         breadcrumb="Tank Restoration & Lining"
-        image="/assets/images/services/frp-tank-restoration.png"
+        image={heroImage}
         imageAlt="FRP storage tank being restored and relined in Saudi Arabia"
       />
 
@@ -275,7 +279,7 @@ export default function TankRestorationLiningPage() {
                 src={feature.image}
                 alt={feature.alt}
                 fill
-                priority
+                loading="eager"
                 sizes="(min-width: 1024px) 66vw, 100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -309,6 +313,7 @@ export default function TankRestorationLiningPage() {
                   src={r.image}
                   alt={r.alt}
                   fill
+                  loading={r.image === heroImage ? "eager" : "lazy"}
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

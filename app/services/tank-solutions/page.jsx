@@ -278,7 +278,7 @@ export default function TankSolutionsPage() {
                 src={feature.image}
                 alt={feature.alt}
                 fill
-                priority
+                loading="eager"
                 sizes="(min-width: 1024px) 66vw, 100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />

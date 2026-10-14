@@ -20,7 +20,10 @@ const features = [
   },
 ];
 
-export default function AboutSection() {
+// `eager`: pass on pages where this section sits right under the hero
+// (e.g. /about-us) so its image loads immediately as the LCP element.
+// On the homepage it's further down the page, so it stays lazy.
+export default function AboutSection({ eager = false }) {
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-950">
       <div className="mx-auto w-full max-w-360 px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24 xl:px-16">
@@ -172,7 +175,8 @@ export default function AboutSection() {
               src="/assets/images/home/about.webp"
               alt="Falcon engineers on an industrial site"
               fill
-              priority={false}
+              loading={eager ? "eager" : "lazy"}
+              fetchPriority={eager ? "high" : "auto"}
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover"
             />

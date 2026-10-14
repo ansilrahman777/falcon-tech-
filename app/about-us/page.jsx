@@ -21,7 +21,7 @@ export default function AboutUs() {
         description="Engineering, manufacturing, supply, installation, inspection, restoration, thermal insulation, tank lining and chiller services for demanding industrial clients across the Kingdom."
         breadcrumb="About Falcon"
       />
-      <AboutSection />
+      <AboutSection eager />
       <ValuesSection />
       <CapabilitiesOverview />
       <StatsCounter />

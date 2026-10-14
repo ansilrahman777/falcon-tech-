@@ -29,7 +29,7 @@ export default function Home() {
       <ProcessSteps />
       {/* <ProjectsSection /> */}
       <WhyChooseUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTASection />
       <BlogSection />
       <LocationMap />

@@ -110,7 +110,7 @@ export default function Footer() {
             sm:grid-cols-2
             sm:gap-x-10
             sm:gap-y-14
-            lg:grid-cols-[1.45fr_1fr_0.9fr_1.15fr]
+            lg:grid-cols-[2.5fr_1fr_.8fr_1.5fr]
             lg:gap-14
             lg:py-16
           "
@@ -126,16 +126,15 @@ export default function Footer() {
               <Image
                 src="/assets/logos/falcon-tech-ksa-white-logo.png"
                 alt="Falcon Technologies KSA"
-                width={2400}
+                width={1980}
                 height={417}
                 priority
-                className="h-auto w-full max-w-xs md:max-w-sm object-contain object-left transition-opacity duration-300"
+                className="h-auto w-full object-contain object-left transition-opacity duration-300"
               />
             </Link>
 
             <p
               className="
-                max-w-xs
                 text-sm
                 leading-[1.75]
                 text-white/55
